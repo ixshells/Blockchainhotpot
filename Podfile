@@ -10,7 +10,7 @@ use_frameworks!
 
 def general_pods
     pod 'CollectionKit'
-    pod 'AlicloudMAN', '~> 1.0.12'
+    pod 'AlicloudMAN', '1.0.13'
 end
 
 target 'BlockchainHotpot' do

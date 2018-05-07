@@ -14,13 +14,11 @@
 		A32A88B520920F37000DFCDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32A88B320920F37000DFCDB /* LaunchScreen.storyboard */; };
 		A32A88C020920F37000DFCDB /* BlockchainHotpotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32A88BF20920F37000DFCDB /* BlockchainHotpotTests.swift */; };
 		A32A88CB20920F37000DFCDB /* BlockchainHotpotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32A88CA20920F37000DFCDB /* BlockchainHotpotUITests.swift */; };
-		A36617AE2093228F001A4091 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A36617AD2093228F001A4091 /* Podfile */; };
-		A36617B220932922001A4091 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36617B120932922001A4091 /* TestData.swift */; };
 		A36617B42098978B001A4091 /* KnowledgebaseHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36617B32098978B001A4091 /* KnowledgebaseHeaderView.swift */; };
 		A36617B82098A6CF001A4091 /* KnowledgebaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36617B72098A6CF001A4091 /* KnowledgebaseCollectionViewCell.swift */; };
 		A36617BA209A00A3001A4091 /* KnowledgebaseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36617B9209A00A2001A4091 /* KnowledgebaseDetailsViewController.swift */; };
 		A36617BD209A0C71001A4091 /* KnowledgebaseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36617BC209A0C71001A4091 /* KnowledgebaseDetails.swift */; };
-		A36617BF209AC62B001A4091 /* Knowledege.html in Resources */ = {isa = PBXBuildFile; fileRef = A36617BE209AC62B001A4091 /* Knowledege.html */; };
+		A3F4013F209C607200E19B28 /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3F4013E209C607200E19B28 /* AliyunEmasServices-Info.plist */; };
 		D6EBF0B3A9F25B64C6B8DF3E /* Pods_BlockchainHotpot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26C164533817D901C84561A3 /* Pods_BlockchainHotpot.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,13 +55,12 @@
 		A32A88C620920F37000DFCDB /* BlockchainHotpotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockchainHotpotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A32A88CA20920F37000DFCDB /* BlockchainHotpotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainHotpotUITests.swift; sourceTree = "<group>"; };
 		A32A88CC20920F37000DFCDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A36617AD2093228F001A4091 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A36617B120932922001A4091 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		A36617B32098978B001A4091 /* KnowledgebaseHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgebaseHeaderView.swift; sourceTree = "<group>"; };
 		A36617B72098A6CF001A4091 /* KnowledgebaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowledgebaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		A36617B9209A00A2001A4091 /* KnowledgebaseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgebaseDetailsViewController.swift; sourceTree = "<group>"; };
 		A36617BC209A0C71001A4091 /* KnowledgebaseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgebaseDetails.swift; sourceTree = "<group>"; };
-		A36617BE209AC62B001A4091 /* Knowledege.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Knowledege.html; sourceTree = "<group>"; };
+		A3F4013E209C607200E19B28 /* AliyunEmasServices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info.plist"; sourceTree = "<group>"; };
+		A3F4014020A02A6600E19B28 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 		A74520F6D2B0B79DE08DBA59 /* Pods-BlockchainHotpot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockchainHotpot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlockchainHotpot/Pods-BlockchainHotpot.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,7 +93,6 @@
 		A32A889E20920F37000DFCDB = {
 			isa = PBXGroup;
 			children = (
-				A36617AD2093228F001A4091 /* Podfile */,
 				A32A88A920920F37000DFCDB /* BlockchainHotpot */,
 				A32A88BE20920F37000DFCDB /* BlockchainHotpotTests */,
 				A32A88C920920F37000DFCDB /* BlockchainHotpotUITests */,
@@ -119,14 +115,14 @@
 		A32A88A920920F37000DFCDB /* BlockchainHotpot */ = {
 			isa = PBXGroup;
 			children = (
-				A36617BE209AC62B001A4091 /* Knowledege.html */,
+				A3F4014120A0378E00E19B28 /* Analysis */,
 				A36617AC20921E61001A4091 /* KnowledgeBase */,
 				A32A88AA20920F37000DFCDB /* AppDelegate.swift */,
 				A32A88AE20920F37000DFCDB /* Main.storyboard */,
 				A32A88B120920F37000DFCDB /* Assets.xcassets */,
+				A3F4014020A02A6600E19B28 /* Bridge.h */,
 				A32A88B320920F37000DFCDB /* LaunchScreen.storyboard */,
 				A32A88B620920F37000DFCDB /* Info.plist */,
-				A36617B120932922001A4091 /* TestData.swift */,
 			);
 			path = BlockchainHotpot;
 			sourceTree = "<group>";
@@ -167,6 +163,14 @@
 				A36617BC209A0C71001A4091 /* KnowledgebaseDetails.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A3F4014120A0378E00E19B28 /* Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				A3F4013E209C607200E19B28 /* AliyunEmasServices-Info.plist */,
+			);
+			path = Analysis;
 			sourceTree = "<group>";
 		};
 		B78AB47A9DD30CE1DA2A8174 /* Frameworks */ = {
@@ -296,10 +300,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F4013F209C607200E19B28 /* AliyunEmasServices-Info.plist in Resources */,
 				A32A88B520920F37000DFCDB /* LaunchScreen.storyboard in Resources */,
 				A32A88B220920F37000DFCDB /* Assets.xcassets in Resources */,
-				A36617AE2093228F001A4091 /* Podfile in Resources */,
-				A36617BF209AC62B001A4091 /* Knowledege.html in Resources */,
 				A32A88B020920F37000DFCDB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +376,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A36617B220932922001A4091 /* TestData.swift in Sources */,
 				A36617B82098A6CF001A4091 /* KnowledgebaseCollectionViewCell.swift in Sources */,
 				A32A88AD20920F37000DFCDB /* KnowledgeVabaseViewController.swift in Sources */,
 				A32A88AB20920F37000DFCDB /* AppDelegate.swift in Sources */,
@@ -552,6 +554,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ixshells.jianshu.BlockchainHotpot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/BlockchainHotpot/Bridge.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -568,6 +571,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ixshells.jianshu.BlockchainHotpot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/BlockchainHotpot/Bridge.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

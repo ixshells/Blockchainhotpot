@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import WebKit
+import SafariServices
 
 class KnowledgebaseDetailsViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     public var knowledgebaseDetails: KnowledgebaseDetails?
@@ -16,18 +17,20 @@ class KnowledgebaseDetailsViewController: UIViewController, WKNavigationDelegate
     @IBOutlet weak var knowledegeDetailsWebview: WKWebView!
 
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupWebView()
-        activityIndicatorView.backgroundColor = UIColor.gray
-    
+        knowledegeDetailsWebview.isHidden = true
         activityIndicatorView.startAnimating()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+
+    override func viewDidLayoutSubviews() {
+        print("")
     }
 
     private func setupWebView() {
@@ -39,18 +42,36 @@ class KnowledgebaseDetailsViewController: UIViewController, WKNavigationDelegate
         let request = URLRequest(url: url!)
 
         knowledegeDetailsWebview.load(request)
+    }
 
-//        let url = Bundle.main.url(forResource: "Knowledege", withExtension: "html")
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
 
+        if navigationAction.targetFrame == nil {
+            webView.load(navigationAction.request)
+        }
 
-//        knowledegeDetailsWebview.loadFileURL(url!, allowingReadAccessTo: Bundle.main.bundleURL)
-//        knowledegeDetailsWebview.load(<#T##data: Data##Data#>, mimeType: <#T##String#>, characterEncodingName: <#T##String#>, baseURL: <#T##URL#>)
+        switch navigationAction.navigationType {
+        case .linkActivated:
+            UIApplication.shared.open( navigationAction.request.url!, options: [:], completionHandler: nil)
+        default:
+            break
+        }
+
+        decisionHandler(.allow)
     }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         if !webView.isLoading {
-            webView.evaluateJavaScript("document.readyState", completionHandler: { (_, _) in
+            let jsCode = "document.getElementsByClassName('article-info')[0].style.display = 'none';" +
+            "document.getElementsByClassName('header-wrap')[0].style.display = 'none';" +
+            "document.getElementsByClassName('article-footer')[0].style.display = 'none';" +
+            "document.getElementsByClassName('user-panel')[0].style.display = 'none';" +
+            "let lazyShim = document.getElementsByClassName('v-lazy-shim');for (var i=0;i<lazyShim.length;i++){lazyShim[i].style.display = 'none';}" +
+            "document.getElementById('footer').style.display = 'none';";
+
+            webView.evaluateJavaScript(jsCode, completionHandler: { (_, _) in
                 self.activityIndicatorView.stopAnimating()
+                self.knowledegeDetailsWebview.isHidden = false
             })
         }
     }
