@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		A32A88AB20920F37000DFCDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32A88AA20920F37000DFCDB /* AppDelegate.swift */; };
-		A32A88AD20920F37000DFCDB /* KnowledgeVabaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32A88AC20920F37000DFCDB /* KnowledgeVabaseViewController.swift */; };
+		A32A88AD20920F37000DFCDB /* KnowledgebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32A88AC20920F37000DFCDB /* KnowledgebaseViewController.swift */; };
 		A32A88B020920F37000DFCDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32A88AE20920F37000DFCDB /* Main.storyboard */; };
 		A32A88B220920F37000DFCDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32A88B120920F37000DFCDB /* Assets.xcassets */; };
 		A32A88B520920F37000DFCDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32A88B320920F37000DFCDB /* LaunchScreen.storyboard */; };
 		A32A88C020920F37000DFCDB /* BlockchainHotpotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32A88BF20920F37000DFCDB /* BlockchainHotpotTests.swift */; };
 		A32A88CB20920F37000DFCDB /* BlockchainHotpotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32A88CA20920F37000DFCDB /* BlockchainHotpotUITests.swift */; };
-		A36617B42098978B001A4091 /* KnowledgebaseHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36617B32098978B001A4091 /* KnowledgebaseHeaderView.swift */; };
 		A36617B82098A6CF001A4091 /* KnowledgebaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36617B72098A6CF001A4091 /* KnowledgebaseCollectionViewCell.swift */; };
 		A36617BA209A00A3001A4091 /* KnowledgebaseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36617B9209A00A2001A4091 /* KnowledgebaseDetailsViewController.swift */; };
-		A36617BD209A0C71001A4091 /* KnowledgebaseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36617BC209A0C71001A4091 /* KnowledgebaseDetails.swift */; };
 		A3F4013F209C607200E19B28 /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3F4013E209C607200E19B28 /* AliyunEmasServices-Info.plist */; };
+		A3F4014720A042F900E19B28 /* KnowledgeInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3F4014620A042F900E19B28 /* KnowledgeInfo.plist */; };
+		A3F4014920A094D100E19B28 /* KnowledgeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F4014820A094D100E19B28 /* KnowledgeInfo.swift */; };
+		A3F4014B20A0956800E19B28 /* KnowledgeBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F4014A20A0956800E19B28 /* KnowledgeBaseViewModel.swift */; };
+		A3F4014E20A09B5A00E19B28 /* Knowledges.json in Resources */ = {isa = PBXBuildFile; fileRef = A3F4014D20A09B5A00E19B28 /* Knowledges.json */; };
 		D6EBF0B3A9F25B64C6B8DF3E /* Pods_BlockchainHotpot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26C164533817D901C84561A3 /* Pods_BlockchainHotpot.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +46,7 @@
 		3546C4F786DE52925CDD93DA /* Pods-BlockchainHotpot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockchainHotpot.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlockchainHotpot/Pods-BlockchainHotpot.release.xcconfig"; sourceTree = "<group>"; };
 		A32A88A720920F37000DFCDB /* BlockchainHotpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockchainHotpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A32A88AA20920F37000DFCDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A32A88AC20920F37000DFCDB /* KnowledgeVabaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeVabaseViewController.swift; sourceTree = "<group>"; };
+		A32A88AC20920F37000DFCDB /* KnowledgebaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgebaseViewController.swift; sourceTree = "<group>"; };
 		A32A88AF20920F37000DFCDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A32A88B120920F37000DFCDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A32A88B420920F37000DFCDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,12 +57,14 @@
 		A32A88C620920F37000DFCDB /* BlockchainHotpotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockchainHotpotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A32A88CA20920F37000DFCDB /* BlockchainHotpotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainHotpotUITests.swift; sourceTree = "<group>"; };
 		A32A88CC20920F37000DFCDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A36617B32098978B001A4091 /* KnowledgebaseHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgebaseHeaderView.swift; sourceTree = "<group>"; };
 		A36617B72098A6CF001A4091 /* KnowledgebaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowledgebaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		A36617B9209A00A2001A4091 /* KnowledgebaseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgebaseDetailsViewController.swift; sourceTree = "<group>"; };
-		A36617BC209A0C71001A4091 /* KnowledgebaseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgebaseDetails.swift; sourceTree = "<group>"; };
 		A3F4013E209C607200E19B28 /* AliyunEmasServices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info.plist"; sourceTree = "<group>"; };
 		A3F4014020A02A6600E19B28 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		A3F4014620A042F900E19B28 /* KnowledgeInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KnowledgeInfo.plist; sourceTree = "<group>"; };
+		A3F4014820A094D100E19B28 /* KnowledgeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowledgeInfo.swift; sourceTree = "<group>"; };
+		A3F4014A20A0956800E19B28 /* KnowledgeBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeBaseViewModel.swift; sourceTree = "<group>"; };
+		A3F4014D20A09B5A00E19B28 /* Knowledges.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Knowledges.json; sourceTree = "<group>"; };
 		A74520F6D2B0B79DE08DBA59 /* Pods-BlockchainHotpot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockchainHotpot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlockchainHotpot/Pods-BlockchainHotpot.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +127,7 @@
 				A3F4014020A02A6600E19B28 /* Bridge.h */,
 				A32A88B320920F37000DFCDB /* LaunchScreen.storyboard */,
 				A32A88B620920F37000DFCDB /* Info.plist */,
+				A3F4014620A042F900E19B28 /* KnowledgeInfo.plist */,
 			);
 			path = BlockchainHotpot;
 			sourceTree = "<group>";
@@ -150,9 +155,9 @@
 			children = (
 				A36617BB209A0C46001A4091 /* Model */,
 				A36617B72098A6CF001A4091 /* KnowledgebaseCollectionViewCell.swift */,
-				A32A88AC20920F37000DFCDB /* KnowledgeVabaseViewController.swift */,
-				A36617B32098978B001A4091 /* KnowledgebaseHeaderView.swift */,
+				A32A88AC20920F37000DFCDB /* KnowledgebaseViewController.swift */,
 				A36617B9209A00A2001A4091 /* KnowledgebaseDetailsViewController.swift */,
+				A3F4014A20A0956800E19B28 /* KnowledgeBaseViewModel.swift */,
 			);
 			path = KnowledgeBase;
 			sourceTree = "<group>";
@@ -160,7 +165,8 @@
 		A36617BB209A0C46001A4091 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A36617BC209A0C71001A4091 /* KnowledgebaseDetails.swift */,
+				A3F4014820A094D100E19B28 /* KnowledgeInfo.swift */,
+				A3F4014D20A09B5A00E19B28 /* Knowledges.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,6 +306,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F4014E20A09B5A00E19B28 /* Knowledges.json in Resources */,
+				A3F4014720A042F900E19B28 /* KnowledgeInfo.plist in Resources */,
 				A3F4013F209C607200E19B28 /* AliyunEmasServices-Info.plist in Resources */,
 				A32A88B520920F37000DFCDB /* LaunchScreen.storyboard in Resources */,
 				A32A88B220920F37000DFCDB /* Assets.xcassets in Resources */,
@@ -376,11 +384,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F4014B20A0956800E19B28 /* KnowledgeBaseViewModel.swift in Sources */,
 				A36617B82098A6CF001A4091 /* KnowledgebaseCollectionViewCell.swift in Sources */,
-				A32A88AD20920F37000DFCDB /* KnowledgeVabaseViewController.swift in Sources */,
+				A32A88AD20920F37000DFCDB /* KnowledgebaseViewController.swift in Sources */,
+				A3F4014920A094D100E19B28 /* KnowledgeInfo.swift in Sources */,
 				A32A88AB20920F37000DFCDB /* AppDelegate.swift in Sources */,
-				A36617BD209A0C71001A4091 /* KnowledgebaseDetails.swift in Sources */,
-				A36617B42098978B001A4091 /* KnowledgebaseHeaderView.swift in Sources */,
 				A36617BA209A00A3001A4091 /* KnowledgebaseDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
