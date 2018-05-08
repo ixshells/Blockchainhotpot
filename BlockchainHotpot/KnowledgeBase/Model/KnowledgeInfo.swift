@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct KnowledgeInfo {
+struct KnowledgeInfo : Codable {
     var title: String
     var detalsUrl: String?
 }
 
-struct knowledges {
-    var knowledgeBases: [KnowledgeInfo]
+struct Knowledges : Codable {
+    var knowledges: [KnowledgeInfo]
 }

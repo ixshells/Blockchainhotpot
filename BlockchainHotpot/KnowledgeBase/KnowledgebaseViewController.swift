@@ -9,19 +9,18 @@
 import UIKit
 import SafariServices
 
-class knowledgesViewModel {
-    static var knowledges:[String] = ["区块链", "智能合约", "加密货币", "挖矿", "共识机制", "区块链分类", "token与币的区别", "钱包", "比特币", "以太坊", "转账", "交易"]
-}
-
 class KnowledgeVabaseViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    var knowledgeBaseViewModel: KnowledgeBaseViewModel = KnowledgeBaseViewModel()
+    var knowledges: Knowledges? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
         collectionView.dataSource = self
         collectionView.delegate = self
+        self.knowledges = knowledgeBaseViewModel.getKnowledgeBases()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -34,7 +33,7 @@ class KnowledgeVabaseViewController: UIViewController, UICollectionViewDataSourc
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return knowledgesViewModel.knowledges.count
+        return (self.knowledges?.knowledges.count)!
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -46,13 +45,13 @@ class KnowledgeVabaseViewController: UIViewController, UICollectionViewDataSourc
         let cell:KnowledgebaseCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "knowledgebaseitem", for: indexPath) as! KnowledgebaseCollectionViewCell
         cell.backgroundColor = UIColor.white
         cell.layer.cornerRadius = self.view.frame.size.width/55
-        cell.setTitle(title: knowledgesViewModel.knowledges[indexPath.row])
+        cell.setTitle(title: (knowledges?.knowledges[indexPath.row].title)!)
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailsCtrl = self.storyboard?.instantiateViewController(withIdentifier: "knowledgebaseDetails") as! KnowledgebaseDetailsViewController
-        detailsCtrl.knowledgebaseDetails = KnowledgebaseDetails(title: knowledgesViewModel.knowledges[indexPath.row], detalsUrl: "https://www.jianshu.com/p/5c10fafdf25e")
+        detailsCtrl.knowledgeInfo = knowledges?.knowledges[indexPath.row]
         self.tabBarController?.tabBar.isHidden = true
         self.navigationController?.show(detailsCtrl, sender: self)
     }

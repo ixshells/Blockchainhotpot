@@ -116,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEI-s9-4D1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1045.5999999999999" y="815.44227886056979"/>
+            <point key="canvasLocation" x="1297" y="815"/>
         </scene>
         <!--区块链-->
         <scene sceneID="N7F-m8-o1X">
@@ -163,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bsS-qW-JAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1928.8" y="814.54272863568224"/>
+            <point key="canvasLocation" x="2079" y="815"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3cH-ss-gA1">
@@ -199,7 +199,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byV-Xb-e4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="297" y="846"/>
+            <point key="canvasLocation" x="484" y="815"/>
         </scene>
         <!--我的-->
         <scene sceneID="tne-QT-ifu">

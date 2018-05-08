@@ -12,7 +12,7 @@ import WebKit
 import SafariServices
 
 class KnowledgebaseDetailsViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
-    public var knowledgebaseDetails: KnowledgebaseDetails?
+    public var knowledgeInfo: KnowledgeInfo?
 
     @IBOutlet weak var knowledegeDetailsWebview: WKWebView!
 
@@ -27,17 +27,14 @@ class KnowledgebaseDetailsViewController: UIViewController, WKNavigationDelegate
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-    }
-
-    override func viewDidLayoutSubviews() {
-        print("")
+        self.title = knowledgeInfo?.title
     }
 
     private func setupWebView() {
         knowledegeDetailsWebview.uiDelegate = self
         knowledegeDetailsWebview.navigationDelegate = self
 
-        let url = URL(string: (knowledgebaseDetails?.detalsUrl)!)
+        let url = URL(string: (knowledgeInfo?.detalsUrl)!)
 
         let request = URLRequest(url: url!)
 
