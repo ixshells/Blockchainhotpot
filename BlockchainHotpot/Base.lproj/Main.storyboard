@@ -177,7 +177,6 @@
                     <connections>
                         <segue destination="YKU-wG-Pls" kind="relationship" relationship="viewControllers" id="D45-WB-4YM"/>
                         <segue destination="3UM-I0-3IB" kind="relationship" relationship="viewControllers" id="ffL-NS-4Hi"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="pS7-Em-Zn8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSm-dT-l8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -200,31 +199,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byV-Xb-e4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="484" y="815"/>
-        </scene>
-        <!--我的-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController title="我的" id="BYZ-38-t0r" customClass="ViewController" customModule="BlockchainHotpot" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我的" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7Q-Dj-Ich">
-                                <rect key="frame" x="121" y="222" width="101" height="114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <color key="textColor" red="0.66683667949748637" green="1" blue="0.7191549633154446" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="我的" id="zcl-Qt-549"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="484" y="1637"/>
         </scene>
     </scenes>
 </document>

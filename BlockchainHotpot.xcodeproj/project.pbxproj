@@ -17,10 +17,11 @@
 		A36617B82098A6CF001A4091 /* KnowledgebaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36617B72098A6CF001A4091 /* KnowledgebaseCollectionViewCell.swift */; };
 		A36617BA209A00A3001A4091 /* KnowledgebaseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36617B9209A00A2001A4091 /* KnowledgebaseDetailsViewController.swift */; };
 		A3F4013F209C607200E19B28 /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3F4013E209C607200E19B28 /* AliyunEmasServices-Info.plist */; };
-		A3F4014720A042F900E19B28 /* KnowledgeInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3F4014620A042F900E19B28 /* KnowledgeInfo.plist */; };
 		A3F4014920A094D100E19B28 /* KnowledgeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F4014820A094D100E19B28 /* KnowledgeInfo.swift */; };
 		A3F4014B20A0956800E19B28 /* KnowledgeBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F4014A20A0956800E19B28 /* KnowledgeBaseViewModel.swift */; };
 		A3F4014E20A09B5A00E19B28 /* Knowledges.json in Resources */ = {isa = PBXBuildFile; fileRef = A3F4014D20A09B5A00E19B28 /* Knowledges.json */; };
+		A3F4015420A1A5BB00E19B28 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F4015220A1A5BA00E19B28 /* iTunesArtwork@2x.png */; };
+		A3F4015520A1A5BB00E19B28 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F4015320A1A5BB00E19B28 /* iTunesArtwork.png */; };
 		D6EBF0B3A9F25B64C6B8DF3E /* Pods_BlockchainHotpot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26C164533817D901C84561A3 /* Pods_BlockchainHotpot.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,10 +62,11 @@
 		A36617B9209A00A2001A4091 /* KnowledgebaseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgebaseDetailsViewController.swift; sourceTree = "<group>"; };
 		A3F4013E209C607200E19B28 /* AliyunEmasServices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info.plist"; sourceTree = "<group>"; };
 		A3F4014020A02A6600E19B28 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
-		A3F4014620A042F900E19B28 /* KnowledgeInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KnowledgeInfo.plist; sourceTree = "<group>"; };
 		A3F4014820A094D100E19B28 /* KnowledgeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowledgeInfo.swift; sourceTree = "<group>"; };
 		A3F4014A20A0956800E19B28 /* KnowledgeBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeBaseViewModel.swift; sourceTree = "<group>"; };
 		A3F4014D20A09B5A00E19B28 /* Knowledges.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Knowledges.json; sourceTree = "<group>"; };
+		A3F4015220A1A5BA00E19B28 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		A3F4015320A1A5BB00E19B28 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		A74520F6D2B0B79DE08DBA59 /* Pods-BlockchainHotpot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockchainHotpot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlockchainHotpot/Pods-BlockchainHotpot.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,10 +126,11 @@
 				A32A88AA20920F37000DFCDB /* AppDelegate.swift */,
 				A32A88AE20920F37000DFCDB /* Main.storyboard */,
 				A32A88B120920F37000DFCDB /* Assets.xcassets */,
+				A3F4015320A1A5BB00E19B28 /* iTunesArtwork.png */,
+				A3F4015220A1A5BA00E19B28 /* iTunesArtwork@2x.png */,
 				A3F4014020A02A6600E19B28 /* Bridge.h */,
 				A32A88B320920F37000DFCDB /* LaunchScreen.storyboard */,
 				A32A88B620920F37000DFCDB /* Info.plist */,
-				A3F4014620A042F900E19B28 /* KnowledgeInfo.plist */,
 			);
 			path = BlockchainHotpot;
 			sourceTree = "<group>";
@@ -307,8 +310,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3F4014E20A09B5A00E19B28 /* Knowledges.json in Resources */,
-				A3F4014720A042F900E19B28 /* KnowledgeInfo.plist in Resources */,
+				A3F4015420A1A5BB00E19B28 /* iTunesArtwork@2x.png in Resources */,
 				A3F4013F209C607200E19B28 /* AliyunEmasServices-Info.plist in Resources */,
+				A3F4015520A1A5BB00E19B28 /* iTunesArtwork.png in Resources */,
 				A32A88B520920F37000DFCDB /* LaunchScreen.storyboard in Resources */,
 				A32A88B220920F37000DFCDB /* Assets.xcassets in Resources */,
 				A32A88B020920F37000DFCDB /* Main.storyboard in Resources */,
