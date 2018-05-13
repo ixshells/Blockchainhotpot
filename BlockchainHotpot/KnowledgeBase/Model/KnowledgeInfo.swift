@@ -10,9 +10,9 @@ import Foundation
 
 struct KnowledgeInfo : Codable {
     var title: String
-    var detalsUrl: String?
+    var detailsUrl: String?
 }
 
 struct Knowledges : Codable {
-    var knowledges: [KnowledgeInfo]
+    var results: [KnowledgeInfo]
 }

@@ -7,16 +7,27 @@
 //
 
 import Foundation
+import Alamofire
 
-class KnowledgeBaseViewModel: NSObject {
+class KnowledgeBaseViewModel {
     var knowledges: Knowledges?
 
-    override init() {
-        super.init()
-    }
+    func getKnowledgeBases(_ completeHandler: @escaping (_ knoledges: Knowledges?) -> Void ) {
 
-    func getKnowledgeBases() -> Knowledges? {
-        return mapKnowledgesFromJson(readKnwledgeData()!)
+        let headers: HTTPHeaders = [
+            "X-LC-Id": "dLH8OSID1Cy0mGypEiYOEXX4-gzGzoHsz",
+            "X-LC-Key": "sIqxNzclGr3bXDQKttjUyXvo"
+        ]
+
+        Alamofire.request("https://dlh8osid.api.lncld.net/1.1/classes/Knowledges", headers: headers).responseJSON { response in
+            print("response result: \(response.result)")
+            print("response data: \(String(describing: response.data))")
+
+            if let data = response.data, let result = String(data: data, encoding: .utf8) {
+                completeHandler(self.mapKnowledgesFromJson(result))
+            }
+        }
+
     }
 
     func readKnwledgeData() -> String? {

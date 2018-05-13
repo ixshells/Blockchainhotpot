@@ -1,0 +1,17 @@
+from hashlib import sha1
+import hmac
+import base64
+
+my_sign = hmac.new('123456', '123456', sha1).digest()
+my_sign = base64.b64encode(my_sign)
+ 
+def stringToSign(): 
+    canonicalHeaders = "x-ots-date".lower() + ":" + "2018-05-08T10:04:59.000Z".strip() + "\n" + "x-ots-apiversion".lower() + ":" + "2015-12-31".strip() + "\n" +"x-ots-accesskeyid".lower() + ":" + "LTAImweUa4IylahT".strip() + "\n" + "x-ots-instancename".lower() + ":" + "blockchain".strip() + "\n" 
+    stringSign = "/ListTable" + '\n' + 'POST' + '\n\n' + canonicalHeaders
+    return stringSign
+
+my_sign = hmac.new('2wt9j6ejxZskKX7GlH9l8tx3Yz5VUI', stringToSign(), sha1).digest()
+my_sign = base64.b64encode(my_sign)
+print stringToSign()
+print my_sign
+

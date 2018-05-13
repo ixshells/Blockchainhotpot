@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import WebKit
 import SafariServices
+import SVProgressHUD
 
 class KnowledgebaseDetailsViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     public var knowledgeInfo: KnowledgeInfo?
@@ -22,19 +23,14 @@ class KnowledgebaseDetailsViewController: UIViewController, WKNavigationDelegate
         super.viewDidLoad()
         setupWebView()
         knowledegeDetailsWebview.isHidden = true
-        activityIndicatorView.startAnimating()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
-        self.title = knowledgeInfo?.title
+        SVProgressHUD.show()
     }
 
     private func setupWebView() {
         knowledegeDetailsWebview.uiDelegate = self
         knowledegeDetailsWebview.navigationDelegate = self
 
-        let url = URL(string: (knowledgeInfo?.detalsUrl)!)
+        let url = URL(string: (knowledgeInfo?.detailsUrl)!)
 
         let request = URLRequest(url: url!)
 
@@ -67,10 +63,16 @@ class KnowledgebaseDetailsViewController: UIViewController, WKNavigationDelegate
             "document.getElementById('footer').style.display = 'none';";
 
             webView.evaluateJavaScript(jsCode, completionHandler: { (_, _) in
-                self.activityIndicatorView.stopAnimating()
+                SVProgressHUD.dismiss()
                 self.knowledegeDetailsWebview.isHidden = false
+                self.setupNavagationBar()
             })
         }
+    }
+
+    func setupNavagationBar() {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.title = knowledgeInfo?.title
     }
 
 }

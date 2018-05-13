@@ -11,6 +11,8 @@ use_frameworks!
 def general_pods
     pod 'CollectionKit'
     pod 'AlicloudMAN', '1.0.13'
+    pod 'Alamofire', '~> 4.7'
+    pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
 end
 
 target 'BlockchainHotpot' do

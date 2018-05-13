@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         let man = ALBBMANAnalytics.getInstance()
-        man?.initWithAppKey("24876877", secretKey: "1f3c7b89a20150ef51371f1c7a8677e4")
+        man?.initWithAppKey("24882007", secretKey: "1019ed7395c04cd019326bd3c745d4ab")
         man?.turnOnDebug()
         man?.autoInit()
 

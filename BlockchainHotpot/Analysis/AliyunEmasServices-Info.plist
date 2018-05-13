@@ -4,17 +4,17 @@
 <dict>
 	<key>config</key>
 	<dict>
-            <key>emas.appKey</key>
-            <string>24876877</string>
-            <key>emas.appSecret</key>
-            <string>1f3c7b89a20150ef51371f1c7a8677e4</string>
-            <key>emas.bundleId</key>
-            <string>com.blockchainhotspot.com</string>
-            <key>hotfix.idSecret</key>
-            <string>24876877-2</string>
-            <key>hotfix.rsaSecret</key>
-            <string>MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCAAxzzTm7lRSZE7LWx5CpOKXa4H6rhXkMSfVGjl4BuUiv7x/mYts4PWKP6LoB4I1RWJcO4TLH7Be4/UYvessf+vrUehYyn66KLl8E3IJ0RuE8LSu+yzifFrF+JzlEJoCM1E5GpdoedMGPnAb1Z+uhQVb1G/KipzrhIcbUj/VIKSM7pAd9olw6ElpVZHAgrqSzntKHfh0n2aHg1vdPoaBRhCxoNrMJPR/T/hUHoJ+M3ri4iPa8NFe8qtbUvLn4/TQFeqhhVaSkH7CYVxyPVMf5K6ra91HpS2QBBdYrP2a1DzbSr8spgdzT2vVYsk/7xuq0FZEjbdZs02pB7LPnE1ka7AgMBAAECggEAPK89Hipkb9OkHLCKQdaEJ6GIYijA/S2OZkl6Vi8P9zyFFUrri/W9IZFHyuYYiNtWs7AbZFcXWISrOOETiXL/VEhb3Cg7Ua9m0v4R3mxbiXbyIcxYbU9Fk3Pvpohj6kg76IFqYAeMqnuyIGS2ut0zHEJJBEnqOvWAbvdYg8MnDTBY62PCwS2/x1fTy9d3i1rVgOZ0g9Gbe+Yj690K6POBSAmSYWbUe6pExajmBxvuUeGkc++xI+Cx0fFeQXR5ckdKmg8NfW8UjgG69gcTxozZ+YAqYmW3sk3b268a8ovktIaMHEvjwaCfu4znTsMMbEVe6Vr8fc/0XkyuVY6RS/xcwQKBgQD/McbiLu4DMYesVLq9t/xOxLJu3tjHh6/qgWyF7EaGx+2B2swu+lqyfHh0P8MF7fF5ULHBl0n7o5FTgTGnD9uDabNh8r9kDJce7SX1CNB+Qn9ocbiPTtO0dCQIl+Pw8UQMS8rhtqpQfhY00f7bpfjpVcfCd+kwh9Nz/3LYqryZQwKBgQCAao9ZVzA0g/Dsewq+N4llTseeIwIq6VGOHcgRyJhBqYGTOvFFS4KyWHwlCNoGeRnU+XW8lYWiOhaiuCZYoR27x1Vgjby0fioSuspNTk3JJtLVgsnt6n8yed9QTbkYcSnnXyJWkn6Z8oiV+Au8CbkrKGTfkmn0oLEt7wN5gzIpKQKBgF0SbHTFpOzpPZAufsT+uziHKISjJfDvncsrVMcrOzWg6RB5GgrwJ+/80XmkX55j/7O9KHdwk/0A1NndvpwtfmPZQyEwBXmZ1evjlfpeMpw56HnRL/ykRTYFPbccnnebprPNWLslgcxFkBfHlunJCJUhQe+9CAE5KHef7OT0sEA9AoGAc5r6t+wk6nIJV2shbcLjfv9f933+upDXKcCn11Kltx8ZFmlOwRpMa6/6+wAv/vnQhomZM4/MARKYRB7R7qIE+YJm2wheZILb74aXDuc6YacA0NPwY63impdasZl204k0tyVO7W7uaDsOOSxXrA141GCGBztxBZgQSZDNqPuyEZkCgYBYJaeHZ8icQVex+qSzYoJtU6nw0IMurmsNf12ZcjDFtjnrdGGqifuMpxlj2jwrzHfJfLmJGhRmhx73cN5XRChZFUKgCvQGI/nysE9YH6hBGDT6ZUT+a7/BrZ7tOJJ+eVkg0OmMPysEmpro5ixPbUnwLifIkXgzAEGWhwNd1EbJvA==</string>
-    	</dict>
+		<key>emas.appKey</key>
+		<string>24882007</string>
+		<key>emas.appSecret</key>
+		<string>1019ed7395c04cd019326bd3c745d4ab</string>
+		<key>emas.bundleId</key>
+		<string>com.easystudio.blockchainhotpot</string>
+		<key>hotfix.idSecret</key>
+		<string>24882007-2</string>
+		<key>hotfix.rsaSecret</key>
+		<string>MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCM8bo2dm/lkGGQYa7xs4Rpfp7vrzPTSkNeuQw/uDwUDhrOmNcxR0LJLjohXyV1vnXpNwAKgQOY9yZGNtcLTRI1X23TIZeeZTgvrFnlIJY24RVCmjV1xEXWJpvgKnfi1hHDGdE/BivftKT4B2cJT3DDSw+TKlDq+SocYbz7gQJqawpWr8Q2y8E2Q5EoX6rKWkBWFZOs1iRFp0VCIZjxMbAnLkWlrZNhdbAtN+Evic6ILQBoxPwB1MfTGxghfy1hSJazF6FihKs8djrM7za52FKc6rotinQvy9gAL9PFcx9bHpiTmoa0RfZdU2Y1o8SLQHUUSuibP8kljDOavGQOjXtdAgMBAAECggEAYfQhsXYwoD/uvnRVLF/R96trdDK0dvTWy38Z1zMIdfuzf7/TVskqzjzVY5oHo8QhmFqEKciuImIp9IRqgc0niXZwElr3T7sTCHbk5wv1ueBGcUpROy6URpgAnxOEzF5wa8KGnSGB3nBicopafqr6OI/zHBk9sYBHVwBKYhSwBBqkyx3DBUlYcdv6qSS2LaB8314K/cwEfw1u11TpaUxgxznoTY9JMecpVebJdTSPZU8w7eiDnIFUSmQjx1Q2vxUP7COLuI/w0WYVUq7pcrjSB6ys0FRlSA8JNdefO1havcDx7qlkkKHTLbzMfKsG8P8ZwkYbCXpXC8+3gCPH4iLslQKBgQDTKMXj62qqz9iMjxCAJ6t4HNh7osV/TDbZwYK0gztaDO6ehb5jBxdh0IFcYp+KWT6gkUrSFz5O64wwT+xtz4dLu6n71Gzf7J6A8Fg+4z594PZAKB6nXPnZ2AVnmzbmMxGw4bPWkK3lkdeEqbreOeJsyFVjccljylNpe26CGXBYIwKBgQCq39z+N9Qv3w+nGCtCs2rDy58GUB012vhuwg/1A8Bmo/W+uQ7KAcwnNAwm1fmxAP2u9645YODq+Es6Mlkkh6rODzwBsrIsFEyHUqX/LNjVVTOQlQURzVxl1DZVA5ieiiXfli8s2/rr1LI2vB6/NbVQyefPUnN/ljBEWoPsnVJWfwKBgF0R/Zcl7k/3aIUbkbRKx+MbI7fq2I3xM8Pq7QdPSFu6k3o/jNjtCTtNwZbMyXEbQOVY5NeQ8x+p5pJsx9Lmw8V3o8ahrJNOIdbHGL4vPx4Qh7ljdY9jBaUk98zgtuPj4opKERAjmOI00/9fKERG0ywLaMd6Ib/gL7+wbdbeC4xtAoGBAJT3IMQHi9ZIEm9LpLs7iwIyi+qHAVAoG5kDWcHyiVNx8RVaY8g8FOzAdS+OL2XeRUq55otjJ/HwkDSmHAy6sW9+3INmc+n1sFnw9YImaMpiwtdy8r54V+r2PH+U6QKd0TLAzVPAW1opTUxmaC+t9On/ezXE3agHGQEeIBCxfkylAoGAel8Am+CwCs0IFWQ/oxs2YJIUIWnRjaBwjwv9dsSb6RddtBl2Vu5W852g82m0Yj1aoVTdDIXhZowEqnVPRX3K8N/HawL1M70wRI0YLgNIUb0GMlUau/8z83C2Pima3OT7cZT9734erjSPIYXDJ1tuBsXCkcLthtJxOHoEiuFNTMM=</string>
+	</dict>
 	<key>services</key>
 	<dict>
 		<key>httpdns_service</key>

@@ -8,6 +8,7 @@
 
 import UIKit
 import SafariServices
+import SVProgressHUD
 
 class KnowledgeVabaseViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
@@ -20,7 +21,12 @@ class KnowledgeVabaseViewController: UIViewController, UICollectionViewDataSourc
         setupLayout()
         collectionView.dataSource = self
         collectionView.delegate = self
-        self.knowledges = knowledgeBaseViewModel.getKnowledgeBases()
+        SVProgressHUD.show()
+        knowledgeBaseViewModel.getKnowledgeBases({ knowledges in
+            self.knowledges = knowledges
+            self.collectionView.reloadData()
+            SVProgressHUD.dismiss()
+        })
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -33,7 +39,7 @@ class KnowledgeVabaseViewController: UIViewController, UICollectionViewDataSourc
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (self.knowledges?.knowledges.count)!
+        return (knowledges == nil) ? 0 : knowledges!.results.count
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -45,13 +51,13 @@ class KnowledgeVabaseViewController: UIViewController, UICollectionViewDataSourc
         let cell:KnowledgebaseCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "knowledgebaseitem", for: indexPath) as! KnowledgebaseCollectionViewCell
         cell.backgroundColor = UIColor.white
         cell.layer.cornerRadius = self.view.frame.size.width/55
-        cell.setTitle(title: (knowledges?.knowledges[indexPath.row].title)!)
+        cell.setTitle(title: (knowledges?.results[indexPath.row].title)!)
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailsCtrl = self.storyboard?.instantiateViewController(withIdentifier: "knowledgebaseDetails") as! KnowledgebaseDetailsViewController
-        detailsCtrl.knowledgeInfo = knowledges?.knowledges[indexPath.row]
+        detailsCtrl.knowledgeInfo = knowledges?.results[indexPath.row]
         self.tabBarController?.tabBar.isHidden = true
         self.navigationController?.show(detailsCtrl, sender: self)
     }
