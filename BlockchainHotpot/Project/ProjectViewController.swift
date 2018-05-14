@@ -35,17 +35,19 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BlockChainProject", for: indexPath)
-        cell.backgroundColor = UIColor.gray
-        cell.layer.cornerRadius = self.view.frame.size.width/55
-        cell.layer.borderColor = UIColor.blue.cgColor
-        cell.layer.borderWidth = 1.0
-        return cell
-    }
+        let shadowPath = UIBezierPath.init(rect: cell.bounds)
+        let cornerRadius = self.view.frame.size.width/55
+        cell.layer.cornerRadius = cornerRadius
+        cell.contentView.layer.cornerRadius = cornerRadius
+        cell.contentView.layer.masksToBounds = true
 
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailsCtrl = self.storyboard?.instantiateViewController(withIdentifier: "knowledgebaseDetails") as! KnowledgebaseDetailsViewController
-        self.tabBarController?.tabBar.isHidden = true
-        self.navigationController?.show(detailsCtrl, sender: self)
+        cell.layer.shadowColor = UIColor.gray.cgColor
+        cell.layer.shadowOpacity = 0.8
+        cell.layer.shadowRadius = 4
+        cell.layer.shadowOffset = CGSize(width: 4, height: 4)
+        cell.layer.shadowPath = shadowPath.cgPath
+        cell.layer.masksToBounds = false
+        return cell
     }
 
     private func setupLayout() {
@@ -54,7 +56,6 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         flowLayout.minimumInteritemSpacing = 20
         flowLayout.minimumLineSpacing = 20
         flowLayout.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20);
-//        flowLayout.headerReferenceSize = CGSize(width: self.view.frame.width, height: 60)
 
         collectionView.collectionViewLayout = flowLayout
     }

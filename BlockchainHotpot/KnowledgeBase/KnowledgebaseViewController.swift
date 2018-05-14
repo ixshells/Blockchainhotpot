@@ -10,7 +10,7 @@ import UIKit
 import SafariServices
 import SVProgressHUD
 
-class KnowledgeVabaseViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class KnowledgeBaseViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     var knowledgeBaseViewModel: KnowledgeBaseViewModel = KnowledgeBaseViewModel()

@@ -37,49 +37,50 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gh5-P3-6gi">
-                                                    <rect key="frame" x="0.0" y="0.0" width="326" height="167.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="326" height="251"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BlockChian" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lme-TR-ikB">
                                                             <rect key="frame" x="0.0" y="0.0" width="326" height="167.5"/>
+                                                            <color key="backgroundColor" red="1" green="0.52156862745098043" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="TokenBar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TB-RE-AG4">
+                                                            <rect key="frame" x="20.5" y="187.5" width="285.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全球区块链项目精选" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5e-A7-mhk">
+                                                            <rect key="frame" x="20" y="218" width="286" height="23"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.5374228395395062" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="1" green="0.52156862745098043" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="lme-TR-ikB" secondAttribute="bottom" id="SFN-gI-Pkx"/>
-                                                        <constraint firstItem="lme-TR-ikB" firstAttribute="centerY" secondItem="gh5-P3-6gi" secondAttribute="centerY" id="TTY-eF-eVU"/>
+                                                        <constraint firstAttribute="bottom" secondItem="N5e-A7-mhk" secondAttribute="bottom" constant="10" id="4tJ-Bl-RZV"/>
+                                                        <constraint firstAttribute="trailing" secondItem="3TB-RE-AG4" secondAttribute="trailing" constant="20" id="HPV-KX-4Uq"/>
+                                                        <constraint firstItem="3TB-RE-AG4" firstAttribute="top" secondItem="lme-TR-ikB" secondAttribute="bottom" constant="20" id="Q0j-9f-H18"/>
+                                                        <constraint firstAttribute="trailing" secondItem="N5e-A7-mhk" secondAttribute="trailing" constant="20" id="Sz4-Y0-rbu"/>
+                                                        <constraint firstItem="3TB-RE-AG4" firstAttribute="leading" secondItem="gh5-P3-6gi" secondAttribute="leading" constant="20" id="a9a-Le-wac"/>
                                                         <constraint firstItem="lme-TR-ikB" firstAttribute="leading" secondItem="gh5-P3-6gi" secondAttribute="leading" id="c3X-o4-j70"/>
+                                                        <constraint firstItem="N5e-A7-mhk" firstAttribute="leading" secondItem="gh5-P3-6gi" secondAttribute="leading" constant="20" id="fyM-rR-X9j"/>
+                                                        <constraint firstItem="lme-TR-ikB" firstAttribute="height" secondItem="gh5-P3-6gi" secondAttribute="height" multiplier="2/3" id="giz-as-h4x"/>
+                                                        <constraint firstItem="N5e-A7-mhk" firstAttribute="top" secondItem="3TB-RE-AG4" secondAttribute="bottom" constant="10" id="gyq-Vv-2Ne"/>
                                                         <constraint firstItem="lme-TR-ikB" firstAttribute="top" secondItem="gh5-P3-6gi" secondAttribute="top" id="yuM-42-nUd"/>
                                                         <constraint firstAttribute="trailing" secondItem="lme-TR-ikB" secondAttribute="trailing" id="yxs-V4-YH6"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TokenBar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TB-RE-AG4">
-                                                    <rect key="frame" x="26" y="187.5" width="284" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全球区块链项目精选" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5e-A7-mhk">
-                                                    <rect key="frame" x="26" y="228" width="300" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="gh5-P3-6gi" secondAttribute="trailing" id="7Xx-J8-JRw"/>
                                             <constraint firstItem="gh5-P3-6gi" firstAttribute="top" secondItem="Ht6-p3-Dfm" secondAttribute="top" id="MnL-hp-VF8"/>
                                             <constraint firstItem="gh5-P3-6gi" firstAttribute="leading" secondItem="Ht6-p3-Dfm" secondAttribute="leading" id="P4U-Eg-BC0"/>
-                                            <constraint firstItem="3TB-RE-AG4" firstAttribute="top" secondItem="lme-TR-ikB" secondAttribute="bottom" constant="20" id="R2Q-H8-4ss"/>
-                                            <constraint firstItem="N5e-A7-mhk" firstAttribute="top" secondItem="3TB-RE-AG4" secondAttribute="bottom" constant="20" id="eMw-Uc-fo6"/>
-                                            <constraint firstAttribute="trailing" secondItem="N5e-A7-mhk" secondAttribute="trailing" id="j4N-d4-7vt"/>
-                                            <constraint firstItem="gh5-P3-6gi" firstAttribute="height" secondItem="Ht6-p3-Dfm" secondAttribute="height" multiplier="2/3" id="r9w-B5-2Pd"/>
-                                            <constraint firstItem="N5e-A7-mhk" firstAttribute="leading" secondItem="Ht6-p3-Dfm" secondAttribute="leadingMargin" constant="10" id="udR-Fl-w57"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="3TB-RE-AG4" secondAttribute="trailing" id="x6d-7y-lwA"/>
-                                            <constraint firstItem="3TB-RE-AG4" firstAttribute="leading" secondItem="Ht6-p3-Dfm" secondAttribute="leadingMargin" constant="10" id="yX0-Ec-GKS"/>
+                                            <constraint firstItem="gh5-P3-6gi" firstAttribute="height" secondItem="Ht6-p3-Dfm" secondAttribute="height" id="r9w-B5-2Pd"/>
                                         </constraints>
                                     </collectionViewCell>
                                 </cells>
@@ -106,7 +107,7 @@
         <!--知识库-->
         <scene sceneID="560-gU-AOk">
             <objects>
-                <viewController title="知识库" id="tVp-PP-oDe" customClass="KnowledgeVabaseViewController" customModule="BlockchainHotpot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="知识库" id="tVp-PP-oDe" customClass="KnowledgeBaseViewController" customModule="BlockchainHotpot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E67-Il-5tM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,7 +256,6 @@
         <!--知识库Navigation-->
         <scene sceneID="4vP-NZ-Tg9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="byV-Xb-e4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController title="知识库Navigation" id="3UM-I0-3IB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="知识库" id="K5p-fz-6QB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2OT-8d-nIC">
@@ -266,6 +266,7 @@
                         <segue destination="1j7-oZ-iqu" kind="relationship" relationship="rootViewController" id="XO5-6n-eJO"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="byV-Xb-e4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1414" y="867"/>
         </scene>
