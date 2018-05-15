@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3UM-I0-3IB">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -11,26 +11,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--精选-->
+        <!--项目-->
         <scene sceneID="iUV-1c-faA">
             <objects>
-                <viewController title="精选" id="YKU-wG-Pls" customClass="ProjectViewController" customModule="BlockchainHotpot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="项目" id="YKU-wG-Pls" customClass="ProjectViewController" customModule="BlockchainHotpot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="67S-S5-QGn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="65N-1A-WJv">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="O5q-Po-6by">
                                     <size key="itemSize" width="326" height="251"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="100"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BlockChainProject" id="Ht6-p3-Dfm">
-                                        <rect key="frame" x="24.5" y="0.0" width="326" height="251"/>
+                                        <rect key="frame" x="-3" y="100" width="326" height="251"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="326" height="251"/>
@@ -84,36 +84,90 @@
                                         </constraints>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="projectHeader" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="projectHeader" id="Spj-sD-CLE">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="精选" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0V-om-vgK">
+                                            <rect key="frame" x="26" y="0.0" width="278" height="36"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="即将上线" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoF-Jb-vIh">
+                                            <rect key="frame" x="26" y="54" width="278" height="52"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.0086685249834884837" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="A0V-om-vgK" firstAttribute="top" secondItem="Spj-sD-CLE" secondAttribute="topMargin" id="HZC-Zn-ESl"/>
+                                        <constraint firstItem="A0V-om-vgK" firstAttribute="leading" secondItem="Spj-sD-CLE" secondAttribute="leadingMargin" constant="10" id="V4q-vr-eir"/>
+                                        <constraint firstItem="FoF-Jb-vIh" firstAttribute="top" secondItem="A0V-om-vgK" secondAttribute="bottom" constant="18" id="bAh-fP-9sl"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="A0V-om-vgK" secondAttribute="trailing" id="cOs-j7-7Zq"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="FoF-Jb-vIh" secondAttribute="trailing" id="jab-uW-8po"/>
+                                        <constraint firstItem="FoF-Jb-vIh" firstAttribute="leading" secondItem="Spj-sD-CLE" secondAttribute="leadingMargin" constant="10" id="jbG-v1-DGl"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="FoF-Jb-vIh" secondAttribute="bottom" constant="-6" id="w1Y-ZK-UMX"/>
+                                    </constraints>
+                                </collectionReusableView>
                             </collectionView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGv-0H-8OL">
+                                <rect key="frame" x="260" y="109" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="6bP-Xm-VMh"/>
+                                    <constraint firstAttribute="height" constant="40" id="sEs-P8-S8O"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="setting">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="OGv-0H-8OL" firstAttribute="top" secondItem="vWY-7s-lm9" secondAttribute="top" constant="45" id="AeT-YA-j8Y"/>
                             <constraint firstItem="vWY-7s-lm9" firstAttribute="bottom" secondItem="65N-1A-WJv" secondAttribute="bottom" id="FRw-f6-WNM"/>
                             <constraint firstItem="65N-1A-WJv" firstAttribute="top" secondItem="vWY-7s-lm9" secondAttribute="top" id="U7E-Pw-Pax"/>
                             <constraint firstItem="65N-1A-WJv" firstAttribute="leading" secondItem="vWY-7s-lm9" secondAttribute="leading" id="XNg-NN-O3E"/>
                             <constraint firstItem="vWY-7s-lm9" firstAttribute="trailing" secondItem="65N-1A-WJv" secondAttribute="trailing" id="lbD-Di-zQ0"/>
+                            <constraint firstItem="vWY-7s-lm9" firstAttribute="trailing" secondItem="OGv-0H-8OL" secondAttribute="trailing" constant="20" id="qUf-YE-hwH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vWY-7s-lm9"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="项目" id="WBA-gv-9Mo"/>
+                    <tabBarItem key="tabBarItem" title="项目" image="bitcoin" selectedImage="bitcoin" id="WBA-gv-9Mo"/>
                     <connections>
                         <outlet property="collectionView" destination="65N-1A-WJv" id="7De-nz-TML"/>
+                        <outlet property="settingButton" destination="OGv-0H-8OL" id="2tw-hf-bTO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WuI-z0-aCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="484" y="101.19940029985008"/>
+            <point key="canvasLocation" x="483.75" y="100.35211267605634"/>
         </scene>
         <!--知识库-->
         <scene sceneID="560-gU-AOk">
             <objects>
                 <viewController title="知识库" id="tVp-PP-oDe" customClass="KnowledgeBaseViewController" customModule="BlockchainHotpot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E67-Il-5tM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iMm-yU-joX">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="0.91807954031744121" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2ST-Gx-0Jz">
                                     <size key="itemSize" width="167" height="50"/>
@@ -123,7 +177,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="knowledgebaseitem" id="RjO-Cq-YwM" customClass="KnowledgebaseCollectionViewCell" customModule="BlockchainHotpot" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="100" width="167" height="50"/>
+                                        <rect key="frame" x="76.5" y="100" width="167" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="167" height="50"/>
@@ -149,7 +203,7 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="knowledgebaseHeader" id="0jo-n1-tvX">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="知识库" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7l-LQ-kpn">
@@ -177,7 +231,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TcM-U9-u8O"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="知识库" id="ISk-ew-Id0"/>
+                    <tabBarItem key="tabBarItem" title="知识库" image="ethereum" selectedImage="ethereumSelected" id="ISk-ew-Id0"/>
                     <navigationItem key="navigationItem" id="3DS-pw-gxJ"/>
                     <connections>
                         <outlet property="collectionView" destination="iMm-yU-joX" id="fE6-oD-a4q"/>
@@ -192,11 +246,11 @@
             <objects>
                 <viewController storyboardIdentifier="knowledgebaseDetails" title="区块链" id="DQI-Mb-rpN" customClass="KnowledgebaseDetailsViewController" customModule="BlockchainHotpot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y1A-Rc-ah1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ray-Cg-RNp">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <color key="backgroundColor" red="0.4039215686" green="0.16918853316314209" blue="0.31577172796703451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -204,7 +258,7 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Cfx-Aa-cOg">
-                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                                <rect key="frame" x="110" y="234" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.53791197784141731" green="0.93449294567108154" blue="0.5572061684870242" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.93449294567108154" green="0.1250444422108872" blue="0.20507116395537114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -234,10 +288,10 @@
             </objects>
             <point key="canvasLocation" x="1476" y="854"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Conroller-->
         <scene sceneID="3cH-ss-gA1">
             <objects>
-                <tabBarController id="1j7-oZ-iqu" sceneMemberID="viewController">
+                <tabBarController id="1j7-oZ-iqu" customClass="TabBarViewConroller" customModule="BlockchainHotpot" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="kEG-hM-vlo"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Usq-EO-UMx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -259,7 +313,7 @@
                 <navigationController title="知识库Navigation" id="3UM-I0-3IB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="知识库" id="K5p-fz-6QB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2OT-8d-nIC">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -271,4 +325,10 @@
             <point key="canvasLocation" x="-1414" y="867"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bitcoin" width="25" height="25"/>
+        <image name="ethereum" width="25" height="25"/>
+        <image name="ethereumSelected" width="25" height="25"/>
+        <image name="setting" width="26" height="26"/>
+    </resources>
 </document>

@@ -11,9 +11,10 @@ import Foundation
 class ProjectViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
 
+    @IBOutlet weak var settingButton: UIButton!
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.title = "精选"
     }
 
@@ -23,6 +24,12 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         setupLayout()
         collectionView.dataSource = self
         collectionView.delegate = self
+
+        settingButton.layer.cornerRadius = 20
+        settingButton.layer.masksToBounds = true
+        settingButton.layer.borderColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.3).cgColor
+        settingButton.layer.borderWidth = 1
+        settingButton.backgroundColor = UIColor.white
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -32,6 +39,12 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
     }
+
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "projectHeader", for: indexPath)
+        return header
+    }
+
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BlockChainProject", for: indexPath)
@@ -47,6 +60,7 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         cell.layer.shadowOffset = CGSize(width: 4, height: 4)
         cell.layer.shadowPath = shadowPath.cgPath
         cell.layer.masksToBounds = false
+
         return cell
     }
 
@@ -55,7 +69,8 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         flowLayout.itemSize = CGSize(width: self.view.frame.size.width - 30, height: self.view.frame.width/4*3)
         flowLayout.minimumInteritemSpacing = 20
         flowLayout.minimumLineSpacing = 20
-        flowLayout.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20);
+        flowLayout.sectionInset = UIEdgeInsetsMake(6, 20, 20, 20);
+        flowLayout.headerReferenceSize = CGSize(width: self.view.frame.width, height: 80)
 
         collectionView.collectionViewLayout = flowLayout
     }
