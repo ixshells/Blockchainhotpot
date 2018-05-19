@@ -26,6 +26,10 @@
 		A315D7C920A9A28400A84055 /* Pin Left@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7B720A9A28400A84055 /* Pin Left@3x.png */; };
 		A315D7CA20A9A28400A84055 /* 分享.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7B820A9A28400A84055 /* 分享.png */; };
 		A315D7CC20A9CCDF00A84055 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A315D7CB20A9CCDF00A84055 /* TabBarViewController.swift */; };
+		A317184520AFDA4A003CBACA /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317184420AFDA4A003CBACA /* ProjectViewModel.swift */; };
+		A317184820AFE09B003CBACA /* BlockchainProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317184720AFE09B003CBACA /* BlockchainProjects.swift */; };
+		A317184A20AFE55E003CBACA /* BlockchainProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317184920AFE55E003CBACA /* BlockchainProjectCell.swift */; };
+		A317184E20AFEAF1003CBACA /* ProjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317184D20AFEAF1003CBACA /* ProjectDetailsViewController.swift */; };
 		A32A88AB20920F37000DFCDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32A88AA20920F37000DFCDB /* AppDelegate.swift */; };
 		A32A88AD20920F37000DFCDB /* KnowledgebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32A88AC20920F37000DFCDB /* KnowledgebaseViewController.swift */; };
 		A32A88B020920F37000DFCDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32A88AE20920F37000DFCDB /* Main.storyboard */; };
@@ -38,8 +42,6 @@
 		A3F4014920A094D100E19B28 /* KnowledgeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F4014820A094D100E19B28 /* KnowledgeInfo.swift */; };
 		A3F4014B20A0956800E19B28 /* KnowledgeBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F4014A20A0956800E19B28 /* KnowledgeBaseViewModel.swift */; };
 		A3F4014E20A09B5A00E19B28 /* Knowledges.json in Resources */ = {isa = PBXBuildFile; fileRef = A3F4014D20A09B5A00E19B28 /* Knowledges.json */; };
-		A3F4015420A1A5BB00E19B28 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F4015220A1A5BA00E19B28 /* iTunesArtwork@2x.png */; };
-		A3F4015520A1A5BB00E19B28 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F4015320A1A5BB00E19B28 /* iTunesArtwork.png */; };
 		A3F4015720A1A9A700E19B28 /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3F4015620A1A9A700E19B28 /* AliyunEmasServices-Info.plist */; };
 		A3F4015A20A8588800E19B28 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F4015920A8588800E19B28 /* ProjectViewController.swift */; };
 		D6EBF0B3A9F25B64C6B8DF3E /* Pods_BlockchainHotpot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26C164533817D901C84561A3 /* Pods_BlockchainHotpot.framework */; };
@@ -84,6 +86,10 @@
 		A315D7B720A9A28400A84055 /* Pin Left@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pin Left@3x.png"; sourceTree = "<group>"; };
 		A315D7B820A9A28400A84055 /* 分享.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "分享.png"; sourceTree = "<group>"; };
 		A315D7CB20A9CCDF00A84055 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		A317184420AFDA4A003CBACA /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
+		A317184720AFE09B003CBACA /* BlockchainProjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainProjects.swift; sourceTree = "<group>"; };
+		A317184920AFE55E003CBACA /* BlockchainProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainProjectCell.swift; sourceTree = "<group>"; };
+		A317184D20AFEAF1003CBACA /* ProjectDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewController.swift; sourceTree = "<group>"; };
 		A32A88A720920F37000DFCDB /* BlockchainHotpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockchainHotpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A32A88AA20920F37000DFCDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A32A88AC20920F37000DFCDB /* KnowledgebaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgebaseViewController.swift; sourceTree = "<group>"; };
@@ -103,8 +109,6 @@
 		A3F4014820A094D100E19B28 /* KnowledgeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowledgeInfo.swift; sourceTree = "<group>"; };
 		A3F4014A20A0956800E19B28 /* KnowledgeBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeBaseViewModel.swift; sourceTree = "<group>"; };
 		A3F4014D20A09B5A00E19B28 /* Knowledges.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Knowledges.json; sourceTree = "<group>"; };
-		A3F4015220A1A5BA00E19B28 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		A3F4015320A1A5BB00E19B28 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		A3F4015620A1A9A700E19B28 /* AliyunEmasServices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info.plist"; sourceTree = "<group>"; };
 		A3F4015920A8588800E19B28 /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		A74520F6D2B0B79DE08DBA59 /* Pods-BlockchainHotpot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockchainHotpot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlockchainHotpot/Pods-BlockchainHotpot.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +165,14 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		A317184620AFE06C003CBACA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A317184720AFE09B003CBACA /* BlockchainProjects.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A32A889E20920F37000DFCDB = {
 			isa = PBXGroup;
 			children = (
@@ -189,12 +201,9 @@
 				A315D7A620A9911700A84055 /* Images */,
 				A3F4015820A854E200E19B28 /* Project */,
 				A3F4014120A0378E00E19B28 /* Analysis */,
-				A36617AC20921E61001A4091 /* KnowledgeBase */,
 				A32A88AA20920F37000DFCDB /* AppDelegate.swift */,
 				A32A88AE20920F37000DFCDB /* Main.storyboard */,
 				A32A88B120920F37000DFCDB /* Assets.xcassets */,
-				A3F4015320A1A5BB00E19B28 /* iTunesArtwork.png */,
-				A3F4015220A1A5BA00E19B28 /* iTunesArtwork@2x.png */,
 				A3F4014020A02A6600E19B28 /* Bridge.h */,
 				A32A88B320920F37000DFCDB /* LaunchScreen.storyboard */,
 				A32A88B620920F37000DFCDB /* Info.plist */,
@@ -245,6 +254,7 @@
 		A3F4014120A0378E00E19B28 /* Analysis */ = {
 			isa = PBXGroup;
 			children = (
+				A36617AC20921E61001A4091 /* KnowledgeBase */,
 				A3F4015620A1A9A700E19B28 /* AliyunEmasServices-Info.plist */,
 			);
 			path = Analysis;
@@ -253,7 +263,11 @@
 		A3F4015820A854E200E19B28 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				A317184620AFE06C003CBACA /* Model */,
 				A3F4015920A8588800E19B28 /* ProjectViewController.swift */,
+				A317184920AFE55E003CBACA /* BlockchainProjectCell.swift */,
+				A317184420AFDA4A003CBACA /* ProjectViewModel.swift */,
+				A317184D20AFEAF1003CBACA /* ProjectDetailsViewController.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -397,9 +411,7 @@
 				A315D7C720A9A28400A84055 /* Icon 62@2x.png in Resources */,
 				A315D7B920A9A28400A84055 /* Icon-Close@2x.png in Resources */,
 				A315D7BA20A9A28400A84055 /* Icon-Close@3x.png in Resources */,
-				A3F4015420A1A5BB00E19B28 /* iTunesArtwork@2x.png in Resources */,
 				A315D7BD20A9A28400A84055 /* ethereum.png in Resources */,
-				A3F4015520A1A5BB00E19B28 /* iTunesArtwork.png in Resources */,
 				A315D7CA20A9A28400A84055 /* 分享.png in Resources */,
 				A32A88B520920F37000DFCDB /* LaunchScreen.storyboard in Resources */,
 				A315D7C120A9A28400A84055 /* ethereum@2x.png in Resources */,
@@ -483,13 +495,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A315D7CC20A9CCDF00A84055 /* TabBarViewController.swift in Sources */,
+				A317184520AFDA4A003CBACA /* ProjectViewModel.swift in Sources */,
 				A3F4014B20A0956800E19B28 /* KnowledgeBaseViewModel.swift in Sources */,
 				A36617B82098A6CF001A4091 /* KnowledgebaseCollectionViewCell.swift in Sources */,
+				A317184A20AFE55E003CBACA /* BlockchainProjectCell.swift in Sources */,
 				A32A88AD20920F37000DFCDB /* KnowledgebaseViewController.swift in Sources */,
 				A3F4015A20A8588800E19B28 /* ProjectViewController.swift in Sources */,
 				A3F4014920A094D100E19B28 /* KnowledgeInfo.swift in Sources */,
 				A32A88AB20920F37000DFCDB /* AppDelegate.swift in Sources */,
+				A317184E20AFEAF1003CBACA /* ProjectDetailsViewController.swift in Sources */,
 				A36617BA209A00A3001A4091 /* KnowledgebaseDetailsViewController.swift in Sources */,
+				A317184820AFE09B003CBACA /* BlockchainProjects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,7 +678,7 @@
 				DEVELOPMENT_TEAM = E3X4D7MVBJ;
 				INFOPLIST_FILE = BlockchainHotpot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ixshells.jianshu.BlockchainHotpot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ixshells.BlockchainHotpot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/BlockchainHotpot/Bridge.h";
 				SWIFT_VERSION = 4.0;
@@ -680,7 +696,7 @@
 				DEVELOPMENT_TEAM = E3X4D7MVBJ;
 				INFOPLIST_FILE = BlockchainHotpot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ixshells.jianshu.BlockchainHotpot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ixshells.BlockchainHotpot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/BlockchainHotpot/Bridge.h";
 				SWIFT_VERSION = 4.0;

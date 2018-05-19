@@ -7,29 +7,30 @@
 //
 
 import Foundation
+import SVProgressHUD
 
 class ProjectViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    @IBOutlet weak var collectionView: UICollectionView!
+    private var projectViewModel: ProjectViewModel = ProjectViewModel()
+    private var blockchainProjects: BlockchainProjects?
 
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var settingButton: UIButton!
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-        self.title = "精选"
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "精选"
         setupLayout()
+        setupSetting();
+        setupProjectsData()
         collectionView.dataSource = self
         collectionView.delegate = self
+    }
 
-        settingButton.layer.cornerRadius = 20
-        settingButton.layer.masksToBounds = true
-        settingButton.layer.borderColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.3).cgColor
-        settingButton.layer.borderWidth = 1
-        settingButton.backgroundColor = UIColor.white
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.tabBarController?.tabBar.isHidden = false
+        self.title = "精选"
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -37,7 +38,7 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return (blockchainProjects == nil) ? 0 : blockchainProjects!.results.count
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -47,7 +48,7 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
 
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BlockChainProject", for: indexPath)
+        let cell:BlockchainProjectCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BlockChainProject", for: indexPath) as! BlockchainProjectCell
         let shadowPath = UIBezierPath.init(rect: cell.bounds)
         let cornerRadius = self.view.frame.size.width/55
         cell.layer.cornerRadius = cornerRadius
@@ -61,18 +62,46 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         cell.layer.shadowPath = shadowPath.cgPath
         cell.layer.masksToBounds = false
 
+        let projectInfo = blockchainProjects?.results[indexPath.row]
+        cell.setInfo(title: (projectInfo?.title)!, descrition: (projectInfo?.description)!)
+
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailsCtrl = self.storyboard?.instantiateViewController(withIdentifier: "projectDetails") as! ProjectDetailsViewController
+        detailsCtrl.projectInfo = blockchainProjects?.results[indexPath.row]
+        self.tabBarController?.tabBar.isHidden = true
+        self.navigationController?.show(detailsCtrl, sender: self)
     }
 
     private func setupLayout() {
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.itemSize = CGSize(width: self.view.frame.size.width - 30, height: self.view.frame.width/4*3)
+        flowLayout.itemSize = CGSize(width: self.view.frame.size.width - 30, height: self.view.frame.width/3*1.66)
         flowLayout.minimumInteritemSpacing = 20
         flowLayout.minimumLineSpacing = 20
         flowLayout.sectionInset = UIEdgeInsetsMake(6, 20, 20, 20);
         flowLayout.headerReferenceSize = CGSize(width: self.view.frame.width, height: 80)
 
         collectionView.collectionViewLayout = flowLayout
+    }
+
+    private func setupSetting() {
+        settingButton.layer.cornerRadius = 20
+        settingButton.layer.masksToBounds = true
+        settingButton.layer.borderColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.3).cgColor
+        settingButton.layer.borderWidth = 1
+        settingButton.backgroundColor = UIColor.white
+    }
+
+    func setupProjectsData() {
+
+        SVProgressHUD.show()
+        projectViewModel.getBlockchainProjects { (blockchainProjects) in
+            self.blockchainProjects = blockchainProjects
+            SVProgressHUD.dismiss()
+            self.collectionView.reloadData();
+        }
     }
 
 }
