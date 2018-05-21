@@ -12,6 +12,7 @@ import UIKit
 class TabBarViewConroller: UITabBarController {
     override func viewDidLoad() {
         let projectItem = self.tabBar.items?[0]
+        self.tabBar.tintColor = UIColor.init(red: 1, green: 120/255.0, blue: 5/255, alpha: 1)
         projectItem?.badgeColor = UIColor.brown
         projectItem?.image = UIImage(named: "bitcoin")?.withRenderingMode(.alwaysOriginal)
         projectItem?.selectedImage = UIImage(named: "bitcoinSelected")?.withRenderingMode(.alwaysOriginal)

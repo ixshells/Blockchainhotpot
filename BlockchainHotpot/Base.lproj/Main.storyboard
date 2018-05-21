@@ -139,6 +139,9 @@
                                         <color key="value" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="dMC-Fm-6ao" kind="show" id="SPf-Bw-BX1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -161,6 +164,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WuI-z0-aCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="483.75" y="100.35211267605634"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wGs-I7-BAA">
+            <objects>
+                <viewController id="dMC-Fm-6ao" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IIl-zK-ws4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1316.25" y="-544.0140845070423"/>
         </scene>
         <!--Project Details View Controller-->
         <scene sceneID="HYK-ZI-82a">
@@ -194,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwS-tF-XBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1416" y="86"/>
+            <point key="canvasLocation" x="1558" y="203"/>
         </scene>
         <!--知识库-->
         <scene sceneID="560-gU-AOk">

@@ -31,6 +31,7 @@ class ProjectDetailsViewController: UIViewController, WKNavigationDelegate, WKUI
         let request = URLRequest(url: url!)
 
         projectDetailsWebview.load(request)
+        self.projectDetailsWebview.isHidden = true
     }
 
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
@@ -62,6 +63,7 @@ class ProjectDetailsViewController: UIViewController, WKNavigationDelegate, WKUI
                 SVProgressHUD.dismiss()
                 self.projectDetailsWebview.isHidden = false
                 self.setupNavagationBar()
+                self.projectDetailsWebview.isHidden = false
             })
         }
     }
