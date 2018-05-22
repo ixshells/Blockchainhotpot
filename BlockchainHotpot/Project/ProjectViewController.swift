@@ -28,9 +28,9 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         collectionView.dataSource = self
         collectionView.delegate = self
 
-        self.navigationController?.navigationBar.prefersLargeTitles = true;
-        self.navigationItem.title = "精选";
-        self.navigationItem.largeTitleDisplayMode = .automatic;
+//        self.navigationController?.navigationBar.prefersLargeTitles = true;
+//        self.navigationItem.title = "精选";
+//        self.navigationItem.largeTitleDisplayMode = .automatic;
 
     }
 
@@ -41,10 +41,7 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         self.title = "精选"
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        SVProgressHUD.dismiss();
-    }
+    
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
