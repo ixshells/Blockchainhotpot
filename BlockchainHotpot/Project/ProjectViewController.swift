@@ -12,7 +12,10 @@ import SVProgressHUD
 class ProjectViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     private var projectViewModel: ProjectViewModel = ProjectViewModel()
     private var blockchainProjects: BlockchainProjects?
+    private final let NAVBAR_CHANGE_POINT = 50.0
+    private var settingButtonCopy: UIButton? = nil
 
+    @IBOutlet weak var navigationRightButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var settingButton: UIButton!
 
@@ -24,6 +27,11 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         setupProjectsData()
         collectionView.dataSource = self
         collectionView.delegate = self
+
+        self.navigationController?.navigationBar.prefersLargeTitles = true;
+        self.navigationItem.title = "精选";
+        self.navigationItem.largeTitleDisplayMode = .automatic;
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -31,6 +39,11 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.tabBarController?.tabBar.isHidden = false
         self.title = "精选"
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        SVProgressHUD.dismiss();
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -89,9 +102,19 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
     private func setupSetting() {
         settingButton.layer.cornerRadius = 20
         settingButton.layer.masksToBounds = true
-        settingButton.layer.borderColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.3).cgColor
+        settingButton.layer.borderColor = UIColor.init(red: 0.66, green: 0.66, blue: 0.66, alpha: 0.3).cgColor
         settingButton.layer.borderWidth = 1
         settingButton.backgroundColor = UIColor.white
+        settingButton.layer.shadowRadius = 5
+        settingButton.layer.shadowOpacity = 0.5
+
+        navigationRightButton.layer.cornerRadius = 20
+        navigationRightButton.layer.masksToBounds = true
+        navigationRightButton.layer.borderColor = UIColor.init(red: 0.66, green: 0.66, blue: 0.66, alpha: 0.3).cgColor
+        navigationRightButton.layer.borderWidth = 1
+        navigationRightButton.backgroundColor = UIColor.white
+        navigationRightButton.layer.shadowRadius = 5
+        navigationRightButton.layer.shadowOpacity = 0.5
     }
 
     func setupProjectsData() {
@@ -101,6 +124,17 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
             self.blockchainProjects = blockchainProjects
             SVProgressHUD.dismiss()
             self.collectionView.reloadData();
+        }
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = Double(scrollView.contentOffset.y);
+        if (offsetY > NAVBAR_CHANGE_POINT) {
+            self.navigationController?.setNavigationBarHidden(false, animated: false)
+            settingButton.isHidden = true
+        } else {
+            self.navigationController?.setNavigationBarHidden(true, animated: false)
+            settingButton.isHidden = false
         }
     }
 

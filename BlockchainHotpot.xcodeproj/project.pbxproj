@@ -30,18 +30,18 @@
 		A317184820AFE09B003CBACA /* BlockchainProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317184720AFE09B003CBACA /* BlockchainProjects.swift */; };
 		A317184A20AFE55E003CBACA /* BlockchainProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317184920AFE55E003CBACA /* BlockchainProjectCell.swift */; };
 		A317184E20AFEAF1003CBACA /* ProjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317184D20AFEAF1003CBACA /* ProjectDetailsViewController.swift */; };
+		A317185A20B45FDB003CBACA /* KnowledgebaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317185220B45FDB003CBACA /* KnowledgebaseCollectionViewCell.swift */; };
+		A317185B20B45FDB003CBACA /* KnowledgebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317185320B45FDB003CBACA /* KnowledgebaseViewController.swift */; };
+		A317185C20B45FDB003CBACA /* KnowledgeBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317185420B45FDB003CBACA /* KnowledgeBaseViewModel.swift */; };
+		A317185E20B45FDB003CBACA /* Knowledges.json in Resources */ = {isa = PBXBuildFile; fileRef = A317185720B45FDB003CBACA /* Knowledges.json */; };
+		A317185F20B45FDB003CBACA /* KnowledgeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317185820B45FDB003CBACA /* KnowledgeInfo.swift */; };
+		A317186020B45FDB003CBACA /* KnowledgebaseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317185920B45FDB003CBACA /* KnowledgebaseDetailsViewController.swift */; };
 		A32A88AB20920F37000DFCDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32A88AA20920F37000DFCDB /* AppDelegate.swift */; };
-		A32A88AD20920F37000DFCDB /* KnowledgebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32A88AC20920F37000DFCDB /* KnowledgebaseViewController.swift */; };
 		A32A88B020920F37000DFCDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32A88AE20920F37000DFCDB /* Main.storyboard */; };
 		A32A88B220920F37000DFCDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32A88B120920F37000DFCDB /* Assets.xcassets */; };
 		A32A88B520920F37000DFCDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32A88B320920F37000DFCDB /* LaunchScreen.storyboard */; };
 		A32A88C020920F37000DFCDB /* BlockchainHotpotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32A88BF20920F37000DFCDB /* BlockchainHotpotTests.swift */; };
 		A32A88CB20920F37000DFCDB /* BlockchainHotpotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32A88CA20920F37000DFCDB /* BlockchainHotpotUITests.swift */; };
-		A36617B82098A6CF001A4091 /* KnowledgebaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36617B72098A6CF001A4091 /* KnowledgebaseCollectionViewCell.swift */; };
-		A36617BA209A00A3001A4091 /* KnowledgebaseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36617B9209A00A2001A4091 /* KnowledgebaseDetailsViewController.swift */; };
-		A3F4014920A094D100E19B28 /* KnowledgeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F4014820A094D100E19B28 /* KnowledgeInfo.swift */; };
-		A3F4014B20A0956800E19B28 /* KnowledgeBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F4014A20A0956800E19B28 /* KnowledgeBaseViewModel.swift */; };
-		A3F4014E20A09B5A00E19B28 /* Knowledges.json in Resources */ = {isa = PBXBuildFile; fileRef = A3F4014D20A09B5A00E19B28 /* Knowledges.json */; };
 		A3F4015720A1A9A700E19B28 /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3F4015620A1A9A700E19B28 /* AliyunEmasServices-Info.plist */; };
 		A3F4015A20A8588800E19B28 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F4015920A8588800E19B28 /* ProjectViewController.swift */; };
 		D6EBF0B3A9F25B64C6B8DF3E /* Pods_BlockchainHotpot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26C164533817D901C84561A3 /* Pods_BlockchainHotpot.framework */; };
@@ -90,9 +90,14 @@
 		A317184720AFE09B003CBACA /* BlockchainProjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainProjects.swift; sourceTree = "<group>"; };
 		A317184920AFE55E003CBACA /* BlockchainProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainProjectCell.swift; sourceTree = "<group>"; };
 		A317184D20AFEAF1003CBACA /* ProjectDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewController.swift; sourceTree = "<group>"; };
+		A317185220B45FDB003CBACA /* KnowledgebaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowledgebaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		A317185320B45FDB003CBACA /* KnowledgebaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowledgebaseViewController.swift; sourceTree = "<group>"; };
+		A317185420B45FDB003CBACA /* KnowledgeBaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowledgeBaseViewModel.swift; sourceTree = "<group>"; };
+		A317185720B45FDB003CBACA /* Knowledges.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Knowledges.json; sourceTree = "<group>"; };
+		A317185820B45FDB003CBACA /* KnowledgeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowledgeInfo.swift; sourceTree = "<group>"; };
+		A317185920B45FDB003CBACA /* KnowledgebaseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowledgebaseDetailsViewController.swift; sourceTree = "<group>"; };
 		A32A88A720920F37000DFCDB /* BlockchainHotpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockchainHotpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A32A88AA20920F37000DFCDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A32A88AC20920F37000DFCDB /* KnowledgebaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgebaseViewController.swift; sourceTree = "<group>"; };
 		A32A88AF20920F37000DFCDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A32A88B120920F37000DFCDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A32A88B420920F37000DFCDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,12 +108,7 @@
 		A32A88C620920F37000DFCDB /* BlockchainHotpotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockchainHotpotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A32A88CA20920F37000DFCDB /* BlockchainHotpotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainHotpotUITests.swift; sourceTree = "<group>"; };
 		A32A88CC20920F37000DFCDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A36617B72098A6CF001A4091 /* KnowledgebaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowledgebaseCollectionViewCell.swift; sourceTree = "<group>"; };
-		A36617B9209A00A2001A4091 /* KnowledgebaseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgebaseDetailsViewController.swift; sourceTree = "<group>"; };
 		A3F4014020A02A6600E19B28 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
-		A3F4014820A094D100E19B28 /* KnowledgeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowledgeInfo.swift; sourceTree = "<group>"; };
-		A3F4014A20A0956800E19B28 /* KnowledgeBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeBaseViewModel.swift; sourceTree = "<group>"; };
-		A3F4014D20A09B5A00E19B28 /* Knowledges.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Knowledges.json; sourceTree = "<group>"; };
 		A3F4015620A1A9A700E19B28 /* AliyunEmasServices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info.plist"; sourceTree = "<group>"; };
 		A3F4015920A8588800E19B28 /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		A74520F6D2B0B79DE08DBA59 /* Pods-BlockchainHotpot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockchainHotpot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlockchainHotpot/Pods-BlockchainHotpot.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +173,27 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		A317185120B45FDB003CBACA /* KnowledgeBase */ = {
+			isa = PBXGroup;
+			children = (
+				A317185220B45FDB003CBACA /* KnowledgebaseCollectionViewCell.swift */,
+				A317185320B45FDB003CBACA /* KnowledgebaseViewController.swift */,
+				A317185420B45FDB003CBACA /* KnowledgeBaseViewModel.swift */,
+				A317185520B45FDB003CBACA /* Model */,
+				A317185920B45FDB003CBACA /* KnowledgebaseDetailsViewController.swift */,
+			);
+			path = KnowledgeBase;
+			sourceTree = "<group>";
+		};
+		A317185520B45FDB003CBACA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A317185720B45FDB003CBACA /* Knowledges.json */,
+				A317185820B45FDB003CBACA /* KnowledgeInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A32A889E20920F37000DFCDB = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +219,7 @@
 		A32A88A920920F37000DFCDB /* BlockchainHotpot */ = {
 			isa = PBXGroup;
 			children = (
+				A317185120B45FDB003CBACA /* KnowledgeBase */,
 				A315D7A620A9911700A84055 /* Images */,
 				A3F4015820A854E200E19B28 /* Project */,
 				A3F4014120A0378E00E19B28 /* Analysis */,
@@ -230,31 +252,9 @@
 			path = BlockchainHotpotUITests;
 			sourceTree = "<group>";
 		};
-		A36617AC20921E61001A4091 /* KnowledgeBase */ = {
-			isa = PBXGroup;
-			children = (
-				A36617BB209A0C46001A4091 /* Model */,
-				A36617B72098A6CF001A4091 /* KnowledgebaseCollectionViewCell.swift */,
-				A32A88AC20920F37000DFCDB /* KnowledgebaseViewController.swift */,
-				A36617B9209A00A2001A4091 /* KnowledgebaseDetailsViewController.swift */,
-				A3F4014A20A0956800E19B28 /* KnowledgeBaseViewModel.swift */,
-			);
-			path = KnowledgeBase;
-			sourceTree = "<group>";
-		};
-		A36617BB209A0C46001A4091 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				A3F4014820A094D100E19B28 /* KnowledgeInfo.swift */,
-				A3F4014D20A09B5A00E19B28 /* Knowledges.json */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		A3F4014120A0378E00E19B28 /* Analysis */ = {
 			isa = PBXGroup;
 			children = (
-				A36617AC20921E61001A4091 /* KnowledgeBase */,
 				A3F4015620A1A9A700E19B28 /* AliyunEmasServices-Info.plist */,
 			);
 			path = Analysis;
@@ -399,12 +399,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3F4014E20A09B5A00E19B28 /* Knowledges.json in Resources */,
 				A315D7BB20A9A28400A84055 /* bitcoin@2x.png in Resources */,
 				A3F4015720A1A9A700E19B28 /* AliyunEmasServices-Info.plist in Resources */,
 				A315D7C420A9A28400A84055 /* Icon-Close.png in Resources */,
 				A315D7C220A9A28400A84055 /* Icon 62@3x.png in Resources */,
 				A315D7BE20A9A28400A84055 /* Icon 62.png in Resources */,
+				A317185E20B45FDB003CBACA /* Knowledges.json in Resources */,
 				A315D7C620A9A28400A84055 /* ethereum@3x.png in Resources */,
 				A315D7C920A9A28400A84055 /* Pin Left@3x.png in Resources */,
 				A315D7BF20A9A28400A84055 /* bitcoin.png in Resources */,
@@ -494,17 +494,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A317185C20B45FDB003CBACA /* KnowledgeBaseViewModel.swift in Sources */,
 				A315D7CC20A9CCDF00A84055 /* TabBarViewController.swift in Sources */,
+				A317185F20B45FDB003CBACA /* KnowledgeInfo.swift in Sources */,
 				A317184520AFDA4A003CBACA /* ProjectViewModel.swift in Sources */,
-				A3F4014B20A0956800E19B28 /* KnowledgeBaseViewModel.swift in Sources */,
-				A36617B82098A6CF001A4091 /* KnowledgebaseCollectionViewCell.swift in Sources */,
+				A317185A20B45FDB003CBACA /* KnowledgebaseCollectionViewCell.swift in Sources */,
 				A317184A20AFE55E003CBACA /* BlockchainProjectCell.swift in Sources */,
-				A32A88AD20920F37000DFCDB /* KnowledgebaseViewController.swift in Sources */,
+				A317186020B45FDB003CBACA /* KnowledgebaseDetailsViewController.swift in Sources */,
 				A3F4015A20A8588800E19B28 /* ProjectViewController.swift in Sources */,
-				A3F4014920A094D100E19B28 /* KnowledgeInfo.swift in Sources */,
 				A32A88AB20920F37000DFCDB /* AppDelegate.swift in Sources */,
+				A317185B20B45FDB003CBACA /* KnowledgebaseViewController.swift in Sources */,
 				A317184E20AFEAF1003CBACA /* ProjectDetailsViewController.swift in Sources */,
-				A36617BA209A00A3001A4091 /* KnowledgebaseDetailsViewController.swift in Sources */,
 				A317184820AFE09B003CBACA /* BlockchainProjects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
