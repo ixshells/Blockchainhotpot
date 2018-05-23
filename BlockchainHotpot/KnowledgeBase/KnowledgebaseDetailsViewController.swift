@@ -22,8 +22,14 @@ class KnowledgebaseDetailsViewController: UIViewController, WKNavigationDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         setupWebView()
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         knowledegeDetailsWebview.isHidden = true
         SVProgressHUD.show()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        SVProgressHUD.dismiss()
     }
 
     private func setupWebView() {
@@ -71,7 +77,6 @@ class KnowledgebaseDetailsViewController: UIViewController, WKNavigationDelegate
     }
 
     func setupNavagationBar() {
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.title = knowledgeInfo?.title
     }
 

@@ -105,70 +105,55 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="projectHeader" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="projectHeader" id="Spj-sD-CLE">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="projectHeader" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="projectHeader" id="Spj-sD-CLE" customClass="ProjectHeaderView" customModule="BlockchainHotpot" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="精选" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0V-om-vgK">
-                                            <rect key="frame" x="26" y="0.0" width="278" height="36"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="即将上线" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoF-Jb-vIh">
-                                            <rect key="frame" x="26" y="54" width="278" height="52"/>
+                                            <rect key="frame" x="26" y="85.5" width="278" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="0.0086685249834884837" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWF-KA-GbF">
+                                            <rect key="frame" x="214" y="49.5" width="40" height="26"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" image="setting">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="20"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                    <color key="value" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="A0V-om-vgK" firstAttribute="top" secondItem="Spj-sD-CLE" secondAttribute="topMargin" id="HZC-Zn-ESl"/>
-                                        <constraint firstItem="A0V-om-vgK" firstAttribute="leading" secondItem="Spj-sD-CLE" secondAttribute="leadingMargin" constant="10" id="V4q-vr-eir"/>
-                                        <constraint firstItem="FoF-Jb-vIh" firstAttribute="top" secondItem="A0V-om-vgK" secondAttribute="bottom" constant="18" id="bAh-fP-9sl"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="A0V-om-vgK" secondAttribute="trailing" id="cOs-j7-7Zq"/>
+                                        <constraint firstItem="FoF-Jb-vIh" firstAttribute="top" secondItem="zWF-KA-GbF" secondAttribute="bottom" constant="10" id="5CS-DS-vK3"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="FoF-Jb-vIh" secondAttribute="trailing" id="jab-uW-8po"/>
                                         <constraint firstItem="FoF-Jb-vIh" firstAttribute="leading" secondItem="Spj-sD-CLE" secondAttribute="leadingMargin" constant="10" id="jbG-v1-DGl"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="FoF-Jb-vIh" secondAttribute="bottom" constant="-6" id="w1Y-ZK-UMX"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="settingButton" destination="zWF-KA-GbF" id="oXV-2v-CrI"/>
+                                    </connections>
                                 </collectionReusableView>
                             </collectionView>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGv-0H-8OL">
-                                <rect key="frame" x="265" y="109" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="6bP-Xm-VMh"/>
-                                    <constraint firstAttribute="height" constant="40" id="sEs-P8-S8O"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="setting">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="dMC-Fm-6ao" kind="show" id="SPf-Bw-BX1"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="OGv-0H-8OL" firstAttribute="top" secondItem="vWY-7s-lm9" secondAttribute="top" constant="45" id="AeT-YA-j8Y"/>
                             <constraint firstItem="vWY-7s-lm9" firstAttribute="bottom" secondItem="65N-1A-WJv" secondAttribute="bottom" id="FRw-f6-WNM"/>
                             <constraint firstItem="65N-1A-WJv" firstAttribute="top" secondItem="vWY-7s-lm9" secondAttribute="top" id="U7E-Pw-Pax"/>
                             <constraint firstItem="65N-1A-WJv" firstAttribute="leading" secondItem="vWY-7s-lm9" secondAttribute="leading" id="XNg-NN-O3E"/>
                             <constraint firstItem="vWY-7s-lm9" firstAttribute="trailing" secondItem="65N-1A-WJv" secondAttribute="trailing" id="lbD-Di-zQ0"/>
-                            <constraint firstItem="vWY-7s-lm9" firstAttribute="trailing" secondItem="OGv-0H-8OL" secondAttribute="trailing" constant="15" id="qUf-YE-hwH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vWY-7s-lm9"/>
                     </view>
@@ -205,20 +190,57 @@
                     <connections>
                         <outlet property="collectionView" destination="65N-1A-WJv" id="7De-nz-TML"/>
                         <outlet property="navigationRightButton" destination="7zy-U7-yq4" id="zwW-eU-yXf"/>
-                        <outlet property="settingButton" destination="OGv-0H-8OL" id="2tw-hf-bTO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WuI-z0-aCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="503" y="59"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="wGs-I7-BAA">
+        <!--Setting View Controller-->
+        <scene sceneID="fpX-JX-uuQ">
             <objects>
-                <viewController id="dMC-Fm-6ao" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IIl-zK-ws4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="settingViewController" id="wp4-xU-b5h" customClass="SettingViewController" customModule="BlockchainHotpot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LaB-9x-tzA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="dDP-Ac-mk5">
+                                <rect key="frame" x="137" y="120" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Ts2-DL-TPv"/>
+                                    <constraint firstAttribute="width" constant="46" id="baL-rW-MZb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tokenbar V1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ez9-Xw-U16">
+                                <rect key="frame" x="0.0" y="183" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="发现全球优质区块链项目" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nV9-Xt-Ndy">
+                                <rect key="frame" x="16" y="220" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ez9-Xw-U16" firstAttribute="leading" secondItem="Okx-fc-z78" secondAttribute="leading" id="3nm-d3-dJb"/>
+                            <constraint firstItem="nV9-Xt-Ndy" firstAttribute="leading" secondItem="Okx-fc-z78" secondAttribute="leading" id="BsS-Fs-9YX"/>
+                            <constraint firstItem="ez9-Xw-U16" firstAttribute="top" secondItem="dDP-Ac-mk5" secondAttribute="bottom" constant="15" id="PhZ-Ax-A2S"/>
+                            <constraint firstItem="nV9-Xt-Ndy" firstAttribute="top" secondItem="ez9-Xw-U16" secondAttribute="bottom" constant="20" id="TeZ-C9-2hh"/>
+                            <constraint firstItem="dDP-Ac-mk5" firstAttribute="top" secondItem="Okx-fc-z78" secondAttribute="top" constant="100" id="dzW-iw-gFI"/>
+                            <constraint firstItem="dDP-Ac-mk5" firstAttribute="centerX" secondItem="Okx-fc-z78" secondAttribute="centerX" id="gWQ-eK-LOQ"/>
+                            <constraint firstItem="Okx-fc-z78" firstAttribute="trailing" secondItem="nV9-Xt-Ndy" secondAttribute="trailing" id="iXM-BL-lyt"/>
+                            <constraint firstItem="Okx-fc-z78" firstAttribute="trailing" secondItem="ez9-Xw-U16" secondAttribute="trailing" id="vX6-sm-lQC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Okx-fc-z78"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8hb-Tp-qey" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1316.25" y="-544.0140845070423"/>
+            <point key="canvasLocation" x="1515" y="-512.32394366197184"/>
         </scene>
         <!--Project Details View Controller-->
         <scene sceneID="HYK-ZI-82a">
@@ -252,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwS-tF-XBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2252" y="-526"/>
+            <point key="canvasLocation" x="1515" y="335"/>
         </scene>
         <!--知识库-->
         <scene sceneID="xRb-xL-Dat">
@@ -425,6 +447,7 @@
         <image name="bitcoin" width="25" height="25"/>
         <image name="ethereum" width="25" height="25"/>
         <image name="ethereumSelected" width="25" height="25"/>
+        <image name="logo" width="46" height="46"/>
         <image name="setting" width="26" height="26"/>
     </resources>
 </document>

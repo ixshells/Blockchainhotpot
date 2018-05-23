@@ -36,6 +36,8 @@
 		A317185E20B45FDB003CBACA /* Knowledges.json in Resources */ = {isa = PBXBuildFile; fileRef = A317185720B45FDB003CBACA /* Knowledges.json */; };
 		A317185F20B45FDB003CBACA /* KnowledgeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317185820B45FDB003CBACA /* KnowledgeInfo.swift */; };
 		A317186020B45FDB003CBACA /* KnowledgebaseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317185920B45FDB003CBACA /* KnowledgebaseDetailsViewController.swift */; };
+		A317186320B54C3F003CBACA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317186220B54C3F003CBACA /* SettingViewController.swift */; };
+		A317186520B56195003CBACA /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317186420B56195003CBACA /* ProjectHeaderView.swift */; };
 		A32A88AB20920F37000DFCDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32A88AA20920F37000DFCDB /* AppDelegate.swift */; };
 		A32A88B020920F37000DFCDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32A88AE20920F37000DFCDB /* Main.storyboard */; };
 		A32A88B220920F37000DFCDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32A88B120920F37000DFCDB /* Assets.xcassets */; };
@@ -96,6 +98,8 @@
 		A317185720B45FDB003CBACA /* Knowledges.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Knowledges.json; sourceTree = "<group>"; };
 		A317185820B45FDB003CBACA /* KnowledgeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowledgeInfo.swift; sourceTree = "<group>"; };
 		A317185920B45FDB003CBACA /* KnowledgebaseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowledgebaseDetailsViewController.swift; sourceTree = "<group>"; };
+		A317186220B54C3F003CBACA /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		A317186420B56195003CBACA /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
 		A32A88A720920F37000DFCDB /* BlockchainHotpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockchainHotpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A32A88AA20920F37000DFCDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A32A88AF20920F37000DFCDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -176,10 +180,10 @@
 		A317185120B45FDB003CBACA /* KnowledgeBase */ = {
 			isa = PBXGroup;
 			children = (
+				A317185520B45FDB003CBACA /* Model */,
 				A317185220B45FDB003CBACA /* KnowledgebaseCollectionViewCell.swift */,
 				A317185320B45FDB003CBACA /* KnowledgebaseViewController.swift */,
 				A317185420B45FDB003CBACA /* KnowledgeBaseViewModel.swift */,
-				A317185520B45FDB003CBACA /* Model */,
 				A317185920B45FDB003CBACA /* KnowledgebaseDetailsViewController.swift */,
 			);
 			path = KnowledgeBase;
@@ -192,6 +196,14 @@
 				A317185820B45FDB003CBACA /* KnowledgeInfo.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A317186120B54C20003CBACA /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A317186220B54C3F003CBACA /* SettingViewController.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		A32A889E20920F37000DFCDB = {
@@ -219,6 +231,7 @@
 		A32A88A920920F37000DFCDB /* BlockchainHotpot */ = {
 			isa = PBXGroup;
 			children = (
+				A317186120B54C20003CBACA /* Setting */,
 				A317185120B45FDB003CBACA /* KnowledgeBase */,
 				A315D7A620A9911700A84055 /* Images */,
 				A3F4015820A854E200E19B28 /* Project */,
@@ -268,6 +281,7 @@
 				A317184920AFE55E003CBACA /* BlockchainProjectCell.swift */,
 				A317184420AFDA4A003CBACA /* ProjectViewModel.swift */,
 				A317184D20AFEAF1003CBACA /* ProjectDetailsViewController.swift */,
+				A317186420B56195003CBACA /* ProjectHeaderView.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -497,6 +511,7 @@
 				A317185C20B45FDB003CBACA /* KnowledgeBaseViewModel.swift in Sources */,
 				A315D7CC20A9CCDF00A84055 /* TabBarViewController.swift in Sources */,
 				A317185F20B45FDB003CBACA /* KnowledgeInfo.swift in Sources */,
+				A317186320B54C3F003CBACA /* SettingViewController.swift in Sources */,
 				A317184520AFDA4A003CBACA /* ProjectViewModel.swift in Sources */,
 				A317185A20B45FDB003CBACA /* KnowledgebaseCollectionViewCell.swift in Sources */,
 				A317184A20AFE55E003CBACA /* BlockchainProjectCell.swift in Sources */,
@@ -506,6 +521,7 @@
 				A317185B20B45FDB003CBACA /* KnowledgebaseViewController.swift in Sources */,
 				A317184E20AFEAF1003CBACA /* ProjectDetailsViewController.swift in Sources */,
 				A317184820AFE09B003CBACA /* BlockchainProjects.swift in Sources */,
+				A317186520B56195003CBACA /* ProjectHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

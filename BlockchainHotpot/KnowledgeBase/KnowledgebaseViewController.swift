@@ -22,6 +22,8 @@ class KnowledgeBaseViewController: UIViewController, UICollectionViewDataSource,
         collectionView.dataSource = self
         collectionView.delegate = self
         SVProgressHUD.show()
+        self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.isNavigationBarHidden = false
         knowledgeBaseViewModel.getKnowledgeBases({ knowledges in
             self.knowledges = knowledges
             self.collectionView.reloadData()

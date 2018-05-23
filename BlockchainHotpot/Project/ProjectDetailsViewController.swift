@@ -21,6 +21,9 @@ class ProjectDetailsViewController: UIViewController, WKNavigationDelegate, WKUI
         projectDetailsWebview.isHidden = true
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         SVProgressHUD.show()
+        self.navigationController?.navigationBar.prefersLargeTitles = false;
+
+
     }
 
     override func viewWillDisappear(_ animated: Bool) {

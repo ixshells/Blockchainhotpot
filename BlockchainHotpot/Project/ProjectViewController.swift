@@ -9,15 +9,14 @@
 import Foundation
 import SVProgressHUD
 
-class ProjectViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ProjectViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate {
     private var projectViewModel: ProjectViewModel = ProjectViewModel()
     private var blockchainProjects: BlockchainProjects?
-    private final let NAVBAR_CHANGE_POINT = 50.0
+    private final let NAVBAR_CHANGE_POINT = 44.0
     private var settingButtonCopy: UIButton? = nil
-
+    private var header: ProjectHeaderView? = nil
     @IBOutlet weak var navigationRightButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var settingButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,20 +27,18 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         collectionView.dataSource = self
         collectionView.delegate = self
 
-//        self.navigationController?.navigationBar.prefersLargeTitles = true;
-//        self.navigationItem.title = "精选";
-//        self.navigationItem.largeTitleDisplayMode = .automatic;
+        self.navigationItem.title = "精选";
+        self.navigationItem.largeTitleDisplayMode = .automatic;
 
+        self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "", style: .plain, target: nil, action: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.navigationBar.prefersLargeTitles = true;
         self.tabBarController?.tabBar.isHidden = false
         self.title = "精选"
     }
-
-    
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -52,9 +49,10 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "projectHeader", for: indexPath)
-        return header
+        header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "projectHeader", for: indexPath) as? ProjectHeaderView
+        return header!
     }
+
 
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -83,6 +81,7 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         detailsCtrl.projectInfo = blockchainProjects?.results[indexPath.row]
         self.tabBarController?.tabBar.isHidden = true
         self.navigationController?.show(detailsCtrl, sender: self)
+
     }
 
     private func setupLayout() {
@@ -91,19 +90,12 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         flowLayout.minimumInteritemSpacing = 20
         flowLayout.minimumLineSpacing = 20
         flowLayout.sectionInset = UIEdgeInsetsMake(6, 20, 20, 20);
-        flowLayout.headerReferenceSize = CGSize(width: self.view.frame.width, height: 80)
+        flowLayout.headerReferenceSize = CGSize(width: self.view.frame.width, height: 40)
 
         collectionView.collectionViewLayout = flowLayout
     }
 
     private func setupSetting() {
-        settingButton.layer.cornerRadius = 20
-        settingButton.layer.masksToBounds = true
-        settingButton.layer.borderColor = UIColor.init(red: 0.66, green: 0.66, blue: 0.66, alpha: 0.3).cgColor
-        settingButton.layer.borderWidth = 1
-        settingButton.backgroundColor = UIColor.white
-        settingButton.layer.shadowRadius = 5
-        settingButton.layer.shadowOpacity = 0.5
 
         navigationRightButton.layer.cornerRadius = 20
         navigationRightButton.layer.masksToBounds = true
@@ -112,10 +104,19 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         navigationRightButton.backgroundColor = UIColor.white
         navigationRightButton.layer.shadowRadius = 5
         navigationRightButton.layer.shadowOpacity = 0.5
+
+        navigationRightButton.addTarget(self, action: #selector(settingAction), for: .touchUpInside)
+
     }
 
-    func setupProjectsData() {
 
+    @objc func settingAction() {
+        let settingViewCtrl = self.storyboard?.instantiateViewController(withIdentifier: "settingViewController")
+        self.navigationController?.show(settingViewCtrl!, sender: nil)
+    }
+
+
+    func setupProjectsData() {
         SVProgressHUD.show()
         projectViewModel.getBlockchainProjects { (blockchainProjects) in
             self.blockchainProjects = blockchainProjects
@@ -124,15 +125,15 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         }
     }
 
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offsetY = Double(scrollView.contentOffset.y);
-        if (offsetY > NAVBAR_CHANGE_POINT) {
-            self.navigationController?.setNavigationBarHidden(false, animated: false)
-            settingButton.isHidden = true
-        } else {
-            self.navigationController?.setNavigationBarHidden(true, animated: false)
-            settingButton.isHidden = false
-        }
-    }
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let offsetY = Double(scrollView.contentOffset.y);
+//        if (offsetY > NAVBAR_CHANGE_POINT) {
+//            self.navigationController?.setNavigationBarHidden(false, animated: false)
+//            header?.setSettingHide(hide: false)
+//        } else {
+//            self.navigationController?.setNavigationBarHidden(true, animated: false)
+//          header?.setSettingHide(hide: true)
+//        }
+//    }
 
 }
