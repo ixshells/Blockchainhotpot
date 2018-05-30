@@ -694,7 +694,7 @@
 				DEVELOPMENT_TEAM = E3X4D7MVBJ;
 				INFOPLIST_FILE = BlockchainHotpot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ixshells.BlockchainHotpot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easystudio.blockchainhotpot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/BlockchainHotpot/Bridge.h";
 				SWIFT_VERSION = 4.0;
@@ -712,7 +712,7 @@
 				DEVELOPMENT_TEAM = E3X4D7MVBJ;
 				INFOPLIST_FILE = BlockchainHotpot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ixshells.BlockchainHotpot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easystudio.blockchainhotpot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/BlockchainHotpot/Bridge.h";
 				SWIFT_VERSION = 4.0;

@@ -110,13 +110,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="即将上线" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoF-Jb-vIh">
-                                            <rect key="frame" x="26" y="85.5" width="278" height="20.5"/>
+                                            <rect key="frame" x="26" y="85" width="278" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="0.0086685249834884837" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWF-KA-GbF">
-                                            <rect key="frame" x="214" y="49.5" width="40" height="26"/>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWF-KA-GbF">
+                                            <rect key="frame" x="214" y="49" width="40" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="eOB-KQ-WV9"/>
+                                            </constraints>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" image="setting">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -140,6 +143,7 @@
                                         <constraint firstItem="FoF-Jb-vIh" firstAttribute="top" secondItem="zWF-KA-GbF" secondAttribute="bottom" constant="10" id="5CS-DS-vK3"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="FoF-Jb-vIh" secondAttribute="trailing" id="jab-uW-8po"/>
                                         <constraint firstItem="FoF-Jb-vIh" firstAttribute="leading" secondItem="Spj-sD-CLE" secondAttribute="leadingMargin" constant="10" id="jbG-v1-DGl"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="zWF-KA-GbF" secondAttribute="trailing" constant="50" id="sNt-m6-KuY"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="FoF-Jb-vIh" secondAttribute="bottom" constant="-6" id="w1Y-ZK-UMX"/>
                                     </constraints>
                                     <connections>
