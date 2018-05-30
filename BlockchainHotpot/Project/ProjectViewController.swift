@@ -43,7 +43,6 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
     }
 
     @objc func headerFresh() {
-        SVProgressHUD.show()
         projectViewModel.getBlockchainProjects { (blockchainProjects) in
             self.blockchainProjects = blockchainProjects
             SVProgressHUD.dismiss()
