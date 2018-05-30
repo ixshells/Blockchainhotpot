@@ -59,7 +59,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ICO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lme-TR-ikB">
                                                             <rect key="frame" x="0.0" y="0.0" width="326" height="167.5"/>
                                                             <color key="backgroundColor" red="1" green="0.52156862745098043" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -204,6 +204,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发现全球优质区块链项目" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nV9-Xt-Ndy">
+                                <rect key="frame" x="0.0" y="222" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="dDP-Ac-mk5">
                                 <rect key="frame" x="137" y="120" width="46" height="46"/>
                                 <constraints>
@@ -211,23 +217,26 @@
                                     <constraint firstAttribute="width" constant="46" id="baL-rW-MZb"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tokenbar V1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ez9-Xw-U16">
-                                <rect key="frame" x="0.0" y="183" width="320" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tokenbar V1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ez9-Xw-U16">
+                                <rect key="frame" x="0.0" y="181" width="320" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="发现全球优质区块链项目" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nV9-Xt-Ndy">
-                                <rect key="frame" x="16" y="220" width="320" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: easystudio@outlook.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oq4-60-gko">
+                                <rect key="frame" x="0.0" y="523.5" width="320" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ez9-Xw-U16" firstAttribute="leading" secondItem="Okx-fc-z78" secondAttribute="leading" id="3nm-d3-dJb"/>
+                            <constraint firstItem="Oq4-60-gko" firstAttribute="leading" secondItem="Okx-fc-z78" secondAttribute="leading" id="4Na-jF-5rO"/>
                             <constraint firstItem="nV9-Xt-Ndy" firstAttribute="leading" secondItem="Okx-fc-z78" secondAttribute="leading" id="BsS-Fs-9YX"/>
+                            <constraint firstItem="Okx-fc-z78" firstAttribute="bottom" secondItem="Oq4-60-gko" secondAttribute="bottom" constant="30" id="HtS-ay-Azl"/>
+                            <constraint firstItem="Okx-fc-z78" firstAttribute="trailing" secondItem="Oq4-60-gko" secondAttribute="trailing" id="MQW-WN-Nd4"/>
                             <constraint firstItem="ez9-Xw-U16" firstAttribute="top" secondItem="dDP-Ac-mk5" secondAttribute="bottom" constant="15" id="PhZ-Ax-A2S"/>
                             <constraint firstItem="nV9-Xt-Ndy" firstAttribute="top" secondItem="ez9-Xw-U16" secondAttribute="bottom" constant="20" id="TeZ-C9-2hh"/>
                             <constraint firstItem="dDP-Ac-mk5" firstAttribute="top" secondItem="Okx-fc-z78" secondAttribute="top" constant="100" id="dzW-iw-gFI"/>

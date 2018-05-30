@@ -8,12 +8,12 @@
 
 import Foundation
 import SVProgressHUD
+import MJRefresh
 
 class ProjectViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate {
     private var projectViewModel: ProjectViewModel = ProjectViewModel()
     private var blockchainProjects: BlockchainProjects?
     private final let NAVBAR_CHANGE_POINT = 44.0
-    private var settingButtonCopy: UIButton? = nil
     private var header: ProjectHeaderView? = nil
     @IBOutlet weak var navigationRightButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -23,7 +23,8 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         self.title = "精选"
         setupLayout()
         setupSetting();
-        setupProjectsData()
+        SVProgressHUD.show()
+        headerFresh()
         collectionView.dataSource = self
         collectionView.delegate = self
 
@@ -31,6 +32,45 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         self.navigationItem.largeTitleDisplayMode = .automatic;
 
         self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "", style: .plain, target: nil, action: nil)
+
+        let header = MJRefreshNormalHeader()
+        header.setRefreshingTarget(self, refreshingAction: #selector(headerFresh))
+        self.collectionView.mj_header = header
+
+        let footer = MJRefreshAutoNormalFooter()
+        footer.setRefreshingTarget(self, refreshingAction: #selector(footerRefresh))
+        self.collectionView.mj_footer = footer
+    }
+
+    @objc func headerFresh() {
+        SVProgressHUD.show()
+        projectViewModel.getBlockchainProjects { (blockchainProjects) in
+            self.blockchainProjects = blockchainProjects
+            SVProgressHUD.dismiss()
+            self.collectionView.reloadData();
+            self.collectionView.mj_header.endRefreshing()
+        }
+    }
+
+    @objc func footerRefresh() {
+        print("footer fresh")
+
+        guard blockchainProjects?.cursor != nil else {
+            self.collectionView.mj_footer.endRefreshingWithNoMoreData()
+            SVProgressHUD.dismiss()
+            return
+        }
+
+        projectViewModel.getNextPageProjects((blockchainProjects?.cursor)!) { (blockchainProjects) in
+            self.blockchainProjects?.cursor = blockchainProjects?.cursor
+
+            if (blockchainProjects != nil) {
+                self.blockchainProjects?.results += blockchainProjects!.results
+            }
+
+            self.collectionView.reloadData();
+            self.collectionView.mj_footer.endRefreshing()
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -81,7 +121,6 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         detailsCtrl.projectInfo = blockchainProjects?.results[indexPath.row]
         self.tabBarController?.tabBar.isHidden = true
         self.navigationController?.show(detailsCtrl, sender: self)
-
     }
 
     private func setupLayout() {
@@ -113,16 +152,6 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
     @objc func settingAction() {
         let settingViewCtrl = self.storyboard?.instantiateViewController(withIdentifier: "settingViewController")
         self.navigationController?.show(settingViewCtrl!, sender: nil)
-    }
-
-
-    func setupProjectsData() {
-        SVProgressHUD.show()
-        projectViewModel.getBlockchainProjects { (blockchainProjects) in
-            self.blockchainProjects = blockchainProjects
-            SVProgressHUD.dismiss()
-            self.collectionView.reloadData();
-        }
     }
 
 //    func scrollViewDidScroll(_ scrollView: UIScrollView) {

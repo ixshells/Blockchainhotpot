@@ -11,4 +11,9 @@
 
 #import <AlicloudMobileAnalitics/ALBBMAN.h>
 
+
+#import <MJRefresh/MJRefresh.h>
+
+//#import <MJRefresh/MJRefreshNormalHeader.h>
+
 #endif /* Bridge_h */

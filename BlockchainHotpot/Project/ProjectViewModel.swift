@@ -11,30 +11,45 @@ import Alamofire
 
 class ProjectViewModel {
 
-    func getBlockchainProjects(_ completeHandler: @escaping (_ projects: BlockchainProjects?) -> Void ) {
+    var projectLists: BlockchainProjects? = nil
 
-        let headers: HTTPHeaders = [
-            "X-LC-Id": "dLH8OSID1Cy0mGypEiYOEXX4-gzGzoHsz",
-            "X-LC-Key": "sIqxNzclGr3bXDQKttjUyXvo"
-        ]
+    let headers: HTTPHeaders = [
+        "X-LC-Id": "dLH8OSID1Cy0mGypEiYOEXX4-gzGzoHsz",
+        "X-LC-Key": "vb7JwLD2eEHiCcYKyjqqTie2,master"
+    ]
 
-        Alamofire.request("https://dlh8osid.api.lncld.net/1.1/classes/BlockChainProject", headers: headers).responseJSON { response in
+    func getBlockchainProjects(_ completeHandler: @escaping (_ projects: BlockchainProjects?) -> Void) {
+        let params: Parameters = ["limit": "10"]
+        sendRequest(params: params, completeHandler)
+    }
+
+    func getNextPageProjects(_ cursor: String, _ completeHandler: @escaping (_ projects: BlockchainProjects?) -> Void ) {
+        let params: Parameters = ["limit": "10", "cursor": cursor]
+        sendRequest(params: params, completeHandler)
+    }
+
+    func sendRequest(params: Parameters?, _ completeHandler: @escaping (_ projects: BlockchainProjects?) -> Void ) {
+        Alamofire.request("https://dlh8osid.api.lncld.net/1.1/scan/classes/BlockChainProject", method: .get, parameters: params, encoding: URLEncoding.default, headers: headers).responseJSON { response in
             print("response result: \(response.result)")
             print("response data: \(String(describing: response.data))")
 
-            if let data = response.data, let result = String(data: data, encoding: .utf8) {
-                completeHandler(self.mapKnowledgesFromJson(result))
+            switch response.result {
+            case .failure(_):
+                return
+            case .success:
+                if let data = response.data, let result = String(data: data, encoding: .utf8) {
+                    completeHandler(self.mapKnowledgesFromJson(result))
+                }
             }
         }
     }
 
     private func mapKnowledgesFromJson(_ json: String) -> BlockchainProjects? {
+        print("json \(json)")
         let jsonData = json.data(using: .utf8)!
 
         let decoder = JSONDecoder()
 
-        let blockchainProjecs = try! decoder.decode(BlockchainProjects.self, from: jsonData)
-
-        return blockchainProjecs
+        return try! decoder.decode(BlockchainProjects.self, from: jsonData)
     }
 }
