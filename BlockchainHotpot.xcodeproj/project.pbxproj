@@ -7,24 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A315D7B920A9A28400A84055 /* Icon-Close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7A720A9A28200A84055 /* Icon-Close@2x.png */; };
-		A315D7BA20A9A28400A84055 /* Icon-Close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7A820A9A28200A84055 /* Icon-Close@3x.png */; };
-		A315D7BB20A9A28400A84055 /* bitcoin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7A920A9A28200A84055 /* bitcoin@2x.png */; };
-		A315D7BC20A9A28400A84055 /* 分享@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7AA20A9A28300A84055 /* 分享@3x.png */; };
-		A315D7BD20A9A28400A84055 /* ethereum.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7AB20A9A28300A84055 /* ethereum.png */; };
-		A315D7BE20A9A28400A84055 /* Icon 62.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7AC20A9A28300A84055 /* Icon 62.png */; };
-		A315D7BF20A9A28400A84055 /* bitcoin.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7AD20A9A28300A84055 /* bitcoin.png */; };
-		A315D7C020A9A28400A84055 /* Pin Left.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7AE20A9A28300A84055 /* Pin Left.png */; };
-		A315D7C120A9A28400A84055 /* ethereum@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7AF20A9A28300A84055 /* ethereum@2x.png */; };
-		A315D7C220A9A28400A84055 /* Icon 62@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7B020A9A28300A84055 /* Icon 62@3x.png */; };
-		A315D7C320A9A28400A84055 /* 分享@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7B120A9A28300A84055 /* 分享@2x.png */; };
-		A315D7C420A9A28400A84055 /* Icon-Close.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7B220A9A28400A84055 /* Icon-Close.png */; };
-		A315D7C520A9A28400A84055 /* bitcoin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7B320A9A28400A84055 /* bitcoin@3x.png */; };
-		A315D7C620A9A28400A84055 /* ethereum@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7B420A9A28400A84055 /* ethereum@3x.png */; };
-		A315D7C720A9A28400A84055 /* Icon 62@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7B520A9A28400A84055 /* Icon 62@2x.png */; };
-		A315D7C820A9A28400A84055 /* Pin Left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7B620A9A28400A84055 /* Pin Left@2x.png */; };
-		A315D7C920A9A28400A84055 /* Pin Left@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7B720A9A28400A84055 /* Pin Left@3x.png */; };
-		A315D7CA20A9A28400A84055 /* 分享.png in Resources */ = {isa = PBXBuildFile; fileRef = A315D7B820A9A28400A84055 /* 分享.png */; };
 		A315D7CC20A9CCDF00A84055 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A315D7CB20A9CCDF00A84055 /* TabBarViewController.swift */; };
 		A317184520AFDA4A003CBACA /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317184420AFDA4A003CBACA /* ProjectViewModel.swift */; };
 		A317184820AFE09B003CBACA /* BlockchainProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317184720AFE09B003CBACA /* BlockchainProjects.swift */; };
@@ -69,24 +51,6 @@
 /* Begin PBXFileReference section */
 		26C164533817D901C84561A3 /* Pods_BlockchainHotpot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlockchainHotpot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3546C4F786DE52925CDD93DA /* Pods-BlockchainHotpot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockchainHotpot.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlockchainHotpot/Pods-BlockchainHotpot.release.xcconfig"; sourceTree = "<group>"; };
-		A315D7A720A9A28200A84055 /* Icon-Close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Close@2x.png"; sourceTree = "<group>"; };
-		A315D7A820A9A28200A84055 /* Icon-Close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Close@3x.png"; sourceTree = "<group>"; };
-		A315D7A920A9A28200A84055 /* bitcoin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bitcoin@2x.png"; sourceTree = "<group>"; };
-		A315D7AA20A9A28300A84055 /* 分享@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "分享@3x.png"; sourceTree = "<group>"; };
-		A315D7AB20A9A28300A84055 /* ethereum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ethereum.png; sourceTree = "<group>"; };
-		A315D7AC20A9A28300A84055 /* Icon 62.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon 62.png"; sourceTree = "<group>"; };
-		A315D7AD20A9A28300A84055 /* bitcoin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bitcoin.png; sourceTree = "<group>"; };
-		A315D7AE20A9A28300A84055 /* Pin Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pin Left.png"; sourceTree = "<group>"; };
-		A315D7AF20A9A28300A84055 /* ethereum@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ethereum@2x.png"; sourceTree = "<group>"; };
-		A315D7B020A9A28300A84055 /* Icon 62@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon 62@3x.png"; sourceTree = "<group>"; };
-		A315D7B120A9A28300A84055 /* 分享@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "分享@2x.png"; sourceTree = "<group>"; };
-		A315D7B220A9A28400A84055 /* Icon-Close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Close.png"; sourceTree = "<group>"; };
-		A315D7B320A9A28400A84055 /* bitcoin@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bitcoin@3x.png"; sourceTree = "<group>"; };
-		A315D7B420A9A28400A84055 /* ethereum@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ethereum@3x.png"; sourceTree = "<group>"; };
-		A315D7B520A9A28400A84055 /* Icon 62@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon 62@2x.png"; sourceTree = "<group>"; };
-		A315D7B620A9A28400A84055 /* Pin Left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pin Left@2x.png"; sourceTree = "<group>"; };
-		A315D7B720A9A28400A84055 /* Pin Left@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pin Left@3x.png"; sourceTree = "<group>"; };
-		A315D7B820A9A28400A84055 /* 分享.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "分享.png"; sourceTree = "<group>"; };
 		A315D7CB20A9CCDF00A84055 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A317184420AFDA4A003CBACA /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 		A317184720AFE09B003CBACA /* BlockchainProjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainProjects.swift; sourceTree = "<group>"; };
@@ -144,31 +108,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A315D7A620A9911700A84055 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				A315D7AD20A9A28300A84055 /* bitcoin.png */,
-				A315D7A920A9A28200A84055 /* bitcoin@2x.png */,
-				A315D7B320A9A28400A84055 /* bitcoin@3x.png */,
-				A315D7AB20A9A28300A84055 /* ethereum.png */,
-				A315D7AF20A9A28300A84055 /* ethereum@2x.png */,
-				A315D7B420A9A28400A84055 /* ethereum@3x.png */,
-				A315D7AC20A9A28300A84055 /* Icon 62.png */,
-				A315D7B520A9A28400A84055 /* Icon 62@2x.png */,
-				A315D7B020A9A28300A84055 /* Icon 62@3x.png */,
-				A315D7B220A9A28400A84055 /* Icon-Close.png */,
-				A315D7A720A9A28200A84055 /* Icon-Close@2x.png */,
-				A315D7A820A9A28200A84055 /* Icon-Close@3x.png */,
-				A315D7AE20A9A28300A84055 /* Pin Left.png */,
-				A315D7B620A9A28400A84055 /* Pin Left@2x.png */,
-				A315D7B720A9A28400A84055 /* Pin Left@3x.png */,
-				A315D7B820A9A28400A84055 /* 分享.png */,
-				A315D7B120A9A28300A84055 /* 分享@2x.png */,
-				A315D7AA20A9A28300A84055 /* 分享@3x.png */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
 		A317184620AFE06C003CBACA /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,7 +172,6 @@
 			children = (
 				A317186120B54C20003CBACA /* Setting */,
 				A317185120B45FDB003CBACA /* KnowledgeBase */,
-				A315D7A620A9911700A84055 /* Images */,
 				A3F4015820A854E200E19B28 /* Project */,
 				A3F4014120A0378E00E19B28 /* Analysis */,
 				A32A88AA20920F37000DFCDB /* AppDelegate.swift */,
@@ -413,28 +351,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A315D7BB20A9A28400A84055 /* bitcoin@2x.png in Resources */,
 				A3F4015720A1A9A700E19B28 /* AliyunEmasServices-Info.plist in Resources */,
-				A315D7C420A9A28400A84055 /* Icon-Close.png in Resources */,
-				A315D7C220A9A28400A84055 /* Icon 62@3x.png in Resources */,
-				A315D7BE20A9A28400A84055 /* Icon 62.png in Resources */,
 				A317185E20B45FDB003CBACA /* Knowledges.json in Resources */,
-				A315D7C620A9A28400A84055 /* ethereum@3x.png in Resources */,
-				A315D7C920A9A28400A84055 /* Pin Left@3x.png in Resources */,
-				A315D7BF20A9A28400A84055 /* bitcoin.png in Resources */,
-				A315D7C720A9A28400A84055 /* Icon 62@2x.png in Resources */,
-				A315D7B920A9A28400A84055 /* Icon-Close@2x.png in Resources */,
-				A315D7BA20A9A28400A84055 /* Icon-Close@3x.png in Resources */,
-				A315D7BD20A9A28400A84055 /* ethereum.png in Resources */,
-				A315D7CA20A9A28400A84055 /* 分享.png in Resources */,
 				A32A88B520920F37000DFCDB /* LaunchScreen.storyboard in Resources */,
-				A315D7C120A9A28400A84055 /* ethereum@2x.png in Resources */,
-				A315D7BC20A9A28400A84055 /* 分享@3x.png in Resources */,
-				A315D7C820A9A28400A84055 /* Pin Left@2x.png in Resources */,
 				A32A88B220920F37000DFCDB /* Assets.xcassets in Resources */,
-				A315D7C520A9A28400A84055 /* bitcoin@3x.png in Resources */,
-				A315D7C320A9A28400A84055 /* 分享@2x.png in Resources */,
-				A315D7C020A9A28400A84055 /* Pin Left.png in Resources */,
 				A32A88B020920F37000DFCDB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
