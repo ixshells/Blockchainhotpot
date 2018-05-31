@@ -23,7 +23,6 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         super.viewDidLoad()
         self.title = "精选"
         setupLayout()
-        setupSetting();
         SVProgressHUD.show()
         headerFresh()
         collectionView.dataSource = self
@@ -148,20 +147,6 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         flowLayout.headerReferenceSize = CGSize(width: self.view.frame.width, height: 140)
 
         collectionView.collectionViewLayout = flowLayout
-    }
-
-    private func setupSetting() {
-
-        navigationRightButton.layer.cornerRadius = 20
-        navigationRightButton.layer.masksToBounds = true
-        navigationRightButton.layer.borderColor = UIColor.init(red: 0.66, green: 0.66, blue: 0.66, alpha: 0.3).cgColor
-        navigationRightButton.layer.borderWidth = 1
-        navigationRightButton.backgroundColor = UIColor.white
-        navigationRightButton.layer.shadowRadius = 5
-        navigationRightButton.layer.shadowOpacity = 0.5
-
-        navigationRightButton.addTarget(self, action: #selector(settingAction), for: .touchUpInside)
-
     }
 
 
