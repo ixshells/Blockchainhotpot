@@ -8,32 +8,36 @@
 
 import Foundation
 
+protocol ProjectHeaderViewDelegate: NSObjectProtocol {
+    func headerSettingAction()
+}
+
 class ProjectHeaderView: UICollectionReusableView {
 
-    @IBOutlet weak var settingButton: UIButton!
+    weak var delegate:ProjectHeaderViewDelegate?
+
+    @IBOutlet weak var headerSettingButton: UIButton!
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
     func setupSetting() {
-
-        settingButton.frame = CGRect(x: self.frame.width - 45, y: self.frame.height - 45, width: 40, height: 40)
-        settingButton.layer.cornerRadius = 20
-        settingButton.layer.masksToBounds = true
-        settingButton.layer.borderColor = UIColor.init(red: 0.66, green: 0.66, blue: 0.66, alpha: 0.3).cgColor
-        settingButton.layer.borderWidth = 1
-        settingButton.backgroundColor = UIColor.white
-        settingButton.layer.shadowRadius = 5
-        settingButton.layer.shadowOpacity = 0.5
-        settingButton.addTarget(self, action: #selector(settingAction), for: .touchUpInside)
+        headerSettingButton.frame = CGRect(x: self.frame.width - 60, y: self.frame.height - 45, width: 40, height: 40)
+        headerSettingButton.layer.cornerRadius = 20
+        headerSettingButton.layer.masksToBounds = true
+        headerSettingButton.layer.borderColor = UIColor.init(red: 0.66, green: 0.66, blue: 0.66, alpha: 0.3).cgColor
+        headerSettingButton.layer.borderWidth = 1
+        headerSettingButton.backgroundColor = UIColor.white
+        headerSettingButton.layer.shadowRadius = 5
+        headerSettingButton.layer.shadowOpacity = 0.5
     }
 
-    func setSettingHide(hide: Bool) {
-        settingButton.isHidden = !hide
+    @IBAction func headeSettingAction(_ sender: Any) {
+        print("test")
+        if delegate != nil {
+            delegate?.headerSettingAction()
+        }
     }
 
-    @objc func settingAction() {
-        print("press")
-    }
 }

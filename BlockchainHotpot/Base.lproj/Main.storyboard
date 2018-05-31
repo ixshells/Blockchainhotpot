@@ -32,12 +32,12 @@
         <scene sceneID="iUV-1c-faA">
             <objects>
                 <viewController title="项目" id="YKU-wG-Pls" customClass="ProjectViewController" customModule="BlockchainHotpot" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="67S-S5-QGn">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="67S-S5-QGn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="65N-1A-WJv">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="-60" width="320" height="628"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="O5q-Po-6by">
                                     <size key="itemSize" width="326" height="251"/>
@@ -115,51 +115,49 @@
                                             <color key="textColor" white="0.0086685249834884837" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWF-KA-GbF">
-                                            <rect key="frame" x="214" y="49" width="40" height="26"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="精选" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eeg-CS-qxd">
+                                            <rect key="frame" x="26" y="55" width="61" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mys-98-MVB">
+                                            <rect key="frame" x="220" y="68" width="40" height="40"/>
+                                            <color key="backgroundColor" red="0.61555782245222934" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="40" id="eOB-KQ-WV9"/>
+                                                <constraint firstAttribute="height" constant="40" id="6cC-Fo-P0u"/>
+                                                <constraint firstAttribute="width" constant="40" id="TlB-GD-ppa"/>
                                             </constraints>
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <state key="normal" image="setting">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="20"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                    <integer key="value" value="1"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                                    <color key="value" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
+                                            <state key="normal" backgroundImage="setting"/>
+                                            <connections>
+                                                <action selector="headeSettingAction:" destination="Spj-sD-CLE" eventType="touchUpInside" id="QTr-PJ-eb2"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="FoF-Jb-vIh" firstAttribute="top" secondItem="zWF-KA-GbF" secondAttribute="bottom" constant="10" id="5CS-DS-vK3"/>
+                                        <constraint firstItem="Eeg-CS-qxd" firstAttribute="top" secondItem="Spj-sD-CLE" secondAttribute="topMargin" constant="55" id="4n2-op-vD7"/>
+                                        <constraint firstItem="FoF-Jb-vIh" firstAttribute="top" secondItem="Eeg-CS-qxd" secondAttribute="bottom" constant="10" id="QpB-zM-Lho"/>
+                                        <constraint firstAttribute="trailing" secondItem="mys-98-MVB" secondAttribute="trailing" constant="60" id="hxx-VN-dX3"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="FoF-Jb-vIh" secondAttribute="trailing" id="jab-uW-8po"/>
                                         <constraint firstItem="FoF-Jb-vIh" firstAttribute="leading" secondItem="Spj-sD-CLE" secondAttribute="leadingMargin" constant="10" id="jbG-v1-DGl"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="zWF-KA-GbF" secondAttribute="trailing" constant="50" id="sNt-m6-KuY"/>
+                                        <constraint firstItem="Eeg-CS-qxd" firstAttribute="leading" secondItem="Spj-sD-CLE" secondAttribute="leadingMargin" constant="10" id="stN-FI-Pcs"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Eeg-CS-qxd" secondAttribute="trailingMargin" id="upe-QV-G2J"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="FoF-Jb-vIh" secondAttribute="bottom" constant="-6" id="w1Y-ZK-UMX"/>
+                                        <constraint firstItem="mys-98-MVB" firstAttribute="top" secondItem="Spj-sD-CLE" secondAttribute="topMargin" constant="68" id="wyx-t9-kDs"/>
                                     </constraints>
                                     <connections>
-                                        <outlet property="settingButton" destination="zWF-KA-GbF" id="oXV-2v-CrI"/>
+                                        <outlet property="headerSettingButton" destination="mys-98-MVB" id="IAG-DX-8cN"/>
                                     </connections>
                                 </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vWY-7s-lm9" firstAttribute="bottom" secondItem="65N-1A-WJv" secondAttribute="bottom" id="FRw-f6-WNM"/>
-                            <constraint firstItem="65N-1A-WJv" firstAttribute="top" secondItem="vWY-7s-lm9" secondAttribute="top" id="U7E-Pw-Pax"/>
-                            <constraint firstItem="65N-1A-WJv" firstAttribute="leading" secondItem="vWY-7s-lm9" secondAttribute="leading" id="XNg-NN-O3E"/>
-                            <constraint firstItem="vWY-7s-lm9" firstAttribute="trailing" secondItem="65N-1A-WJv" secondAttribute="trailing" id="lbD-Di-zQ0"/>
+                            <constraint firstAttribute="bottom" secondItem="65N-1A-WJv" secondAttribute="bottom" id="FRw-f6-WNM"/>
+                            <constraint firstItem="65N-1A-WJv" firstAttribute="leading" secondItem="67S-S5-QGn" secondAttribute="leading" id="XNg-NN-O3E"/>
+                            <constraint firstAttribute="trailing" secondItem="65N-1A-WJv" secondAttribute="trailing" id="lbD-Di-zQ0"/>
+                            <constraint firstItem="65N-1A-WJv" firstAttribute="top" secondItem="67S-S5-QGn" secondAttribute="top" constant="-60" id="t4m-Nm-eZn"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="vWY-7s-lm9"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="项目" image="bitcoin" selectedImage="bitcoin" id="WBA-gv-9Mo"/>
                     <navigationItem key="navigationItem" id="eap-RR-Vhr">

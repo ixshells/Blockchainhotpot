@@ -10,14 +10,15 @@ import Foundation
 import SVProgressHUD
 import MJRefresh
 
-class ProjectViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate {
+class ProjectViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate, ProjectHeaderViewDelegate {
     private var projectViewModel: ProjectViewModel = ProjectViewModel()
     private var blockchainProjects: BlockchainProjects?
     private final let NAVBAR_CHANGE_POINT = 44.0
     private var header: ProjectHeaderView? = nil
     @IBOutlet weak var navigationRightButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet weak var settingButtonFromHeader: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "精选"
@@ -40,6 +41,13 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         let footer = MJRefreshAutoNormalFooter()
         footer.setRefreshingTarget(self, refreshingAction: #selector(footerRefresh))
         self.collectionView.mj_footer = footer
+
+        self.navigationController?.navigationBar.isHidden = true
+//        self.navigationController?.navigationBar.lt_setBackgroundColor(UIColor.clear)
+    }
+
+    @IBAction func headerSettingAction(_ sender: Any) {
+        print("test")
     }
 
     @objc func headerFresh() {
@@ -74,9 +82,14 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.prefersLargeTitles = true;
+//        self.navigationController?.navigationBar.prefersLargeTitles = true;
         self.tabBarController?.tabBar.isHidden = false
         self.title = "精选"
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = false
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -89,10 +102,14 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "projectHeader", for: indexPath) as? ProjectHeaderView
+        header?.setupSetting()
+        header?.delegate = self
         return header!
     }
 
-
+    func headerSettingAction() {
+        settingAction()
+    }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:BlockchainProjectCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BlockChainProject", for: indexPath) as! BlockchainProjectCell
@@ -128,7 +145,7 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         flowLayout.minimumInteritemSpacing = 20
         flowLayout.minimumLineSpacing = 20
         flowLayout.sectionInset = UIEdgeInsetsMake(6, 20, 20, 20);
-        flowLayout.headerReferenceSize = CGSize(width: self.view.frame.width, height: 40)
+        flowLayout.headerReferenceSize = CGSize(width: self.view.frame.width, height: 140)
 
         collectionView.collectionViewLayout = flowLayout
     }
@@ -153,15 +170,14 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         self.navigationController?.show(settingViewCtrl!, sender: nil)
     }
 
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        let offsetY = Double(scrollView.contentOffset.y);
-//        if (offsetY > NAVBAR_CHANGE_POINT) {
-//            self.navigationController?.setNavigationBarHidden(false, animated: false)
-//            header?.setSettingHide(hide: false)
-//        } else {
-//            self.navigationController?.setNavigationBarHidden(true, animated: false)
-//          header?.setSettingHide(hide: true)
-//        }
-//    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = Double(scrollView.contentOffset.y);
+        _ = UIColor.init(red: 0/255.0, green: 175/255.0, blue: 240/255.0, alpha: 1)
+        if (offsetY > NAVBAR_CHANGE_POINT) {
+            self.navigationController?.navigationBar.isHidden = false
+        } else {
+            self.navigationController?.navigationBar.isHidden = true
+        }
+    }
 
 }
