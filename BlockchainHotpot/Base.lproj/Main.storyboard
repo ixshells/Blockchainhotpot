@@ -160,38 +160,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="项目" image="bitcoin" selectedImage="bitcoin" id="WBA-gv-9Mo"/>
-                    <navigationItem key="navigationItem" id="eap-RR-Vhr">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="GmW-Ai-Omt">
-                            <button key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="7zy-U7-yq4">
-                                <rect key="frame" x="278" y="9" width="26" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="Seq-tc-L1y"/>
-                                    <constraint firstAttribute="height" constant="40" id="dKg-A2-0ZB"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="setting">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="eap-RR-Vhr"/>
                     <connections>
                         <outlet property="collectionView" destination="65N-1A-WJv" id="7De-nz-TML"/>
-                        <outlet property="navigationRightButton" destination="7zy-U7-yq4" id="zwW-eU-yXf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WuI-z0-aCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
