@@ -18,6 +18,8 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
     @IBOutlet weak var navigationRightButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var settingButtonFromHeader: UIButton!
+    let navigationView = UIView()
+    let seperatorView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,8 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "", style: .plain, target: nil, action: nil)
 
         let header = MJRefreshNormalHeader()
+        header.lastUpdatedTimeLabel.isHidden = true
+        header.stateLabel.isHidden = true
         header.setRefreshingTarget(self, refreshingAction: #selector(headerFresh))
         self.collectionView.mj_header = header
 
@@ -41,12 +45,7 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         footer.setRefreshingTarget(self, refreshingAction: #selector(footerRefresh))
         self.collectionView.mj_footer = footer
 
-        self.navigationController?.navigationBar.isHidden = true
-//        self.navigationController?.navigationBar.lt_setBackgroundColor(UIColor.clear)
-    }
-
-    @IBAction func headerSettingAction(_ sender: Any) {
-        print("test")
+        setupNavigationView()
     }
 
     @objc func headerFresh() {
@@ -81,7 +80,7 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        self.navigationController?.navigationBar.prefersLargeTitles = true;
+        self.navigationController?.navigationBar.isHidden = true
         self.tabBarController?.tabBar.isHidden = false
         self.title = "精选"
     }
@@ -101,7 +100,6 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "projectHeader", for: indexPath) as? ProjectHeaderView
-        header?.setupSetting()
         header?.delegate = self
         return header!
     }
@@ -144,7 +142,7 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         flowLayout.minimumInteritemSpacing = 20
         flowLayout.minimumLineSpacing = 20
         flowLayout.sectionInset = UIEdgeInsetsMake(6, 20, 20, 20);
-        flowLayout.headerReferenceSize = CGSize(width: self.view.frame.width, height: 140)
+        flowLayout.headerReferenceSize = CGSize(width: self.view.frame.width, height: 100)
 
         collectionView.collectionViewLayout = flowLayout
     }
@@ -157,12 +155,30 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = Double(scrollView.contentOffset.y);
-        _ = UIColor.init(red: 0/255.0, green: 175/255.0, blue: 240/255.0, alpha: 1)
+        let alpha = min(1, 1 - ((NAVBAR_CHANGE_POINT + 64 - offsetY) / 64))
         if (offsetY > NAVBAR_CHANGE_POINT) {
-            self.navigationController?.navigationBar.isHidden = false
+            navigationView.isHidden = false
+            navigationView.alpha = CGFloat(alpha)
+            seperatorView.isHidden = alpha < 0.85
         } else {
-            self.navigationController?.navigationBar.isHidden = true
+            navigationView.isHidden = true
         }
     }
 
+    func setupNavigationView() {
+        navigationView.frame = CGRect(x: 0, y: 20, width: self.view.frame.width, height: 50)
+        navigationView.backgroundColor = UIColor.white
+        self.view.addSubview(navigationView)
+
+        seperatorView.frame = CGRect(x: 0, y: 49, width: self.view.frame.width, height: 1)
+        seperatorView.backgroundColor = UIColor.init(white: 0.9, alpha: 1.0)
+        navigationView.addSubview(seperatorView)
+
+        let titleLabel = UILabel()
+        titleLabel.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50)
+        titleLabel.textAlignment = .center
+        titleLabel.font.withSize(12)
+        titleLabel.text = "精选"
+        navigationView.addSubview(titleLabel)
+    }
 }
