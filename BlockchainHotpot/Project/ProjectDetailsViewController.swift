@@ -21,9 +21,7 @@ class ProjectDetailsViewController: UIViewController, WKNavigationDelegate, WKUI
         projectDetailsWebview.isHidden = true
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         SVProgressHUD.show()
-        self.navigationController?.navigationBar.prefersLargeTitles = false;
-
-
+        self.navigationController?.navigationBar.prefersLargeTitles = false
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -43,6 +41,7 @@ class ProjectDetailsViewController: UIViewController, WKNavigationDelegate, WKUI
         self.projectDetailsWebview.isHidden = true
     }
 
+    // swiftlint:disable line_length
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
 
         if navigationAction.targetFrame == nil {
@@ -66,7 +65,7 @@ class ProjectDetailsViewController: UIViewController, WKNavigationDelegate, WKUI
                 "document.getElementsByClassName('article-footer')[0].style.display = 'none';" +
                 "document.getElementsByClassName('user-panel')[0].style.display = 'none';" +
                 "let lazyShim = document.getElementsByClassName('v-lazy-shim');for (var i=0;i<lazyShim.length;i++){lazyShim[i].style.display = 'none';}" +
-            "document.getElementById('footer').style.display = 'none';";
+            "document.getElementById('footer').style.display = 'none';"
 
             webView.evaluateJavaScript(jsCode, completionHandler: { (_, _) in
                 SVProgressHUD.dismiss()

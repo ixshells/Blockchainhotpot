@@ -43,6 +43,7 @@ class KnowledgebaseDetailsViewController: UIViewController, WKNavigationDelegate
         knowledegeDetailsWebview.load(request)
     }
 
+    // swiftlint:disable line_length
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
 
         if navigationAction.targetFrame == nil {
@@ -66,7 +67,7 @@ class KnowledgebaseDetailsViewController: UIViewController, WKNavigationDelegate
             "document.getElementsByClassName('article-footer')[0].style.display = 'none';" +
             "document.getElementsByClassName('user-panel')[0].style.display = 'none';" +
             "let lazyShim = document.getElementsByClassName('v-lazy-shim');for (var i=0;i<lazyShim.length;i++){lazyShim[i].style.display = 'none';}" +
-            "document.getElementById('footer').style.display = 'none';";
+            "document.getElementById('footer').style.display = 'none';"
 
             webView.evaluateJavaScript(jsCode, completionHandler: { (_, _) in
                 SVProgressHUD.dismiss()
@@ -79,6 +80,4 @@ class KnowledgebaseDetailsViewController: UIViewController, WKNavigationDelegate
     func setupNavagationBar() {
         self.title = knowledgeInfo?.title
     }
-
 }
-

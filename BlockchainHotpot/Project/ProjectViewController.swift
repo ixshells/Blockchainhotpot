@@ -10,11 +10,12 @@ import Foundation
 import SVProgressHUD
 import MJRefresh
 
+// swiftlint:disable line_length
 class ProjectViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate, ProjectHeaderViewDelegate {
     private var projectViewModel: ProjectViewModel = ProjectViewModel()
     private var blockchainProjects: BlockchainProjects?
     private final let NAVBAR_CHANGE_POINT = 44.0
-    private var header: ProjectHeaderView? = nil
+    private var header: ProjectHeaderView?
     @IBOutlet weak var navigationRightButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var settingButtonFromHeader: UIButton!
@@ -30,8 +31,8 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         collectionView.dataSource = self
         collectionView.delegate = self
 
-        self.navigationItem.title = "精选";
-        self.navigationItem.largeTitleDisplayMode = .automatic;
+        self.navigationItem.title = "精选"
+        self.navigationItem.largeTitleDisplayMode = .automatic
 
         self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "", style: .plain, target: nil, action: nil)
 
@@ -52,7 +53,7 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         projectViewModel.getBlockchainProjects { (blockchainProjects) in
             self.blockchainProjects = blockchainProjects
             SVProgressHUD.dismiss()
-            self.collectionView.reloadData();
+            self.collectionView.reloadData()
             self.collectionView.mj_header.endRefreshing()
         }
     }
@@ -69,11 +70,11 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         projectViewModel.getNextPageProjects((blockchainProjects?.cursor)!) { (blockchainProjects) in
             self.blockchainProjects?.cursor = blockchainProjects?.cursor
 
-            if (blockchainProjects != nil) {
+            if blockchainProjects != nil {
                 self.blockchainProjects?.results += blockchainProjects!.results
             }
 
-            self.collectionView.reloadData();
+            self.collectionView.reloadData()
             self.collectionView.mj_footer.endRefreshing()
         }
     }
@@ -109,7 +110,8 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell:BlockchainProjectCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BlockChainProject", for: indexPath) as! BlockchainProjectCell
+        // swiftlint:disable force_cast
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BlockChainProject", for: indexPath) as! BlockchainProjectCell
         let shadowPath = UIBezierPath.init(rect: cell.bounds)
         let cornerRadius = self.view.frame.size.width/55
         cell.layer.cornerRadius = cornerRadius
@@ -130,10 +132,11 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailsCtrl = self.storyboard?.instantiateViewController(withIdentifier: "projectDetails") as! ProjectDetailsViewController
-        detailsCtrl.projectInfo = blockchainProjects?.results[indexPath.row]
-        self.tabBarController?.tabBar.isHidden = true
-        self.navigationController?.show(detailsCtrl, sender: self)
+        if let detailsCtrl = self.storyboard?.instantiateViewController(withIdentifier: "projectDetails") as? ProjectDetailsViewController {
+            detailsCtrl.projectInfo = blockchainProjects?.results[indexPath.row]
+            self.tabBarController?.tabBar.isHidden = true
+            self.navigationController?.show(detailsCtrl, sender: self)
+        }
     }
 
     private func setupLayout() {
@@ -141,22 +144,21 @@ class ProjectViewController: UIViewController, UICollectionViewDataSource, UICol
         flowLayout.itemSize = CGSize(width: self.view.frame.size.width - 30, height: self.view.frame.width/3*1.66)
         flowLayout.minimumInteritemSpacing = 20
         flowLayout.minimumLineSpacing = 20
-        flowLayout.sectionInset = UIEdgeInsetsMake(6, 20, 20, 20);
+        flowLayout.sectionInset = UIEdgeInsets(top: 6, left: 20, bottom: 20, right: 20)
         flowLayout.headerReferenceSize = CGSize(width: self.view.frame.width, height: 100)
 
         collectionView.collectionViewLayout = flowLayout
     }
-
-
+    
     @objc func settingAction() {
         let settingViewCtrl = self.storyboard?.instantiateViewController(withIdentifier: "settingViewController")
         self.navigationController?.show(settingViewCtrl!, sender: nil)
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offsetY = Double(scrollView.contentOffset.y);
+        let offsetY = Double(scrollView.contentOffset.y)
         let alpha = min(1, 1 - ((NAVBAR_CHANGE_POINT + 64 - offsetY) / 64))
-        if (offsetY > NAVBAR_CHANGE_POINT) {
+        if offsetY > NAVBAR_CHANGE_POINT {
             navigationView.isHidden = false
             navigationView.alpha = CGFloat(alpha)
             seperatorView.isHidden = alpha < 0.85

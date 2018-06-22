@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BlockchainProjectCell:  UICollectionViewCell{
+class BlockchainProjectCell: UICollectionViewCell {
 
     @IBOutlet weak var descriptionLabelView: UILabel!
     @IBOutlet weak var titleLabel: UILabel!

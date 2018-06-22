@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82E5F2BF20DCD535005BBA90 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 82E5F2BE20DCD535005BBA90 /* .swiftlint.yml */; };
 		A315D7CC20A9CCDF00A84055 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A315D7CB20A9CCDF00A84055 /* TabBarViewController.swift */; };
 		A317184520AFDA4A003CBACA /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317184420AFDA4A003CBACA /* ProjectViewModel.swift */; };
 		A317184820AFE09B003CBACA /* BlockchainProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317184720AFE09B003CBACA /* BlockchainProjects.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		26C164533817D901C84561A3 /* Pods_BlockchainHotpot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlockchainHotpot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3546C4F786DE52925CDD93DA /* Pods-BlockchainHotpot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockchainHotpot.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlockchainHotpot/Pods-BlockchainHotpot.release.xcconfig"; sourceTree = "<group>"; };
+		82E5F2BE20DCD535005BBA90 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A315D7CB20A9CCDF00A84055 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A317184420AFDA4A003CBACA /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 		A317184720AFE09B003CBACA /* BlockchainProjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainProjects.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		A32A889E20920F37000DFCDB = {
 			isa = PBXGroup;
 			children = (
+				82E5F2BE20DCD535005BBA90 /* .swiftlint.yml */,
 				A32A88A920920F37000DFCDB /* BlockchainHotpot */,
 				A32A88BE20920F37000DFCDB /* BlockchainHotpotTests */,
 				A32A88C920920F37000DFCDB /* BlockchainHotpotUITests */,
@@ -254,6 +257,7 @@
 				A32A88A520920F37000DFCDB /* Resources */,
 				2B89F37040BFD80E68BC3D4E /* [CP] Embed Pods Frameworks */,
 				87A25F59AA26E13844AF3A47 /* [CP] Copy Pods Resources */,
+				82E5F2BD20DCD492005BBA90 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -351,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82E5F2BF20DCD535005BBA90 /* .swiftlint.yml in Resources */,
 				A3F4015720A1A9A700E19B28 /* AliyunEmasServices-Info.plist in Resources */,
 				A317185E20B45FDB003CBACA /* Knowledges.json in Resources */,
 				A32A88B520920F37000DFCDB /* LaunchScreen.storyboard in Resources */,
@@ -405,6 +410,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		82E5F2BD20DCD492005BBA90 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		87A25F59AA26E13844AF3A47 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -615,7 +633,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E3X4D7MVBJ;
+				DEVELOPMENT_TEAM = XD7JAMNS86;
 				INFOPLIST_FILE = BlockchainHotpot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.easystudio.blockchainhotpot;
@@ -633,7 +651,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E3X4D7MVBJ;
+				DEVELOPMENT_TEAM = XD7JAMNS86;
 				INFOPLIST_FILE = BlockchainHotpot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.easystudio.blockchainhotpot;

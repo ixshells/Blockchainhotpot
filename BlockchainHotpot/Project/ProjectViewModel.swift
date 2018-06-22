@@ -11,7 +11,7 @@ import Alamofire
 
 class ProjectViewModel {
 
-    var projectLists: BlockchainProjects? = nil
+    var projectLists: BlockchainProjects?
 
     let headers: HTTPHeaders = [
         "X-LC-Id": "dLH8OSID1Cy0mGypEiYOEXX4-gzGzoHsz",
@@ -29,12 +29,13 @@ class ProjectViewModel {
     }
 
     func sendRequest(params: Parameters?, _ completeHandler: @escaping (_ projects: BlockchainProjects?) -> Void ) {
-        Alamofire.request("https://dlh8osid.api.lncld.net/1.1/scan/classes/BlockChainProject", method: .get, parameters: params, encoding: URLEncoding.default, headers: headers).responseJSON { response in
+        let url = "https://dlh8osid.api.lncld.net/1.1/scan/classes/BlockChainProject"
+        Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: headers).responseJSON { response in
             print("response result: \(response.result)")
             print("response data: \(String(describing: response.data))")
 
             switch response.result {
-            case .failure(_):
+            case .failure:
                 return
             case .success:
                 if let data = response.data, let result = String(data: data, encoding: .utf8) {
@@ -50,6 +51,6 @@ class ProjectViewModel {
 
         let decoder = JSONDecoder()
 
-        return try! decoder.decode(BlockchainProjects.self, from: jsonData)
+        return try? decoder.decode(BlockchainProjects.self, from: jsonData)
     }
 }

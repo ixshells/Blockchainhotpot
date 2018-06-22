@@ -14,7 +14,7 @@ class KnowledgeBaseViewController: UIViewController, UICollectionViewDataSource,
 
     @IBOutlet weak var collectionView: UICollectionView!
     var knowledgeBaseViewModel: KnowledgeBaseViewModel = KnowledgeBaseViewModel()
-    var knowledges: Knowledges? = nil
+    var knowledges: Knowledges?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,13 +44,16 @@ class KnowledgeBaseViewController: UIViewController, UICollectionViewDataSource,
         return (knowledges == nil) ? 0 : knowledges!.results.count
     }
 
+    // swiftlint:disable line_length
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "knowledgebaseHeader", for: indexPath)
+        let kind = UICollectionElementKindSectionHeader
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "knowledgebaseHeader", for: indexPath)
         return header
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell:KnowledgebaseCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "knowledgebaseitem", for: indexPath) as! KnowledgebaseCollectionViewCell
+        // swiftlint:disable force_cast
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "knowledgebaseitem", for: indexPath) as! KnowledgebaseCollectionViewCell
         cell.backgroundColor = UIColor.white
         cell.layer.cornerRadius = self.view.frame.size.width/55
         cell.setTitle(title: (knowledges?.results[indexPath.row].title)!)
@@ -58,10 +61,11 @@ class KnowledgeBaseViewController: UIViewController, UICollectionViewDataSource,
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailsCtrl = self.storyboard?.instantiateViewController(withIdentifier: "knowledgebaseDetails") as! KnowledgebaseDetailsViewController
-        detailsCtrl.knowledgeInfo = knowledges?.results[indexPath.row]
-        self.tabBarController?.tabBar.isHidden = true
-        self.navigationController?.show(detailsCtrl, sender: self)
+        if let detailsCtrl = self.storyboard?.instantiateViewController(withIdentifier: "knowledgebaseDetails") as? KnowledgebaseDetailsViewController {
+            detailsCtrl.knowledgeInfo = knowledges?.results[indexPath.row]
+            self.tabBarController?.tabBar.isHidden = true
+            self.navigationController?.show(detailsCtrl, sender: self)
+        }
     }
 
     private func setupLayout() {
@@ -69,11 +73,9 @@ class KnowledgeBaseViewController: UIViewController, UICollectionViewDataSource,
         flowLayout.itemSize = CGSize(width: self.view.frame.size.width/2 - 30, height: (self.view.frame.width/2 - 40)/2)
         flowLayout.minimumInteritemSpacing = 20
         flowLayout.minimumLineSpacing = 20
-        flowLayout.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20);
+        flowLayout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         flowLayout.headerReferenceSize = CGSize(width: self.view.frame.width, height: 60)
 
         collectionView.collectionViewLayout = flowLayout
     }
-
 }
-

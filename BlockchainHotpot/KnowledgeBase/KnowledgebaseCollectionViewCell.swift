@@ -12,7 +12,7 @@ import UIKit
 class KnowledgebaseCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var knowledgebaseTitle: UILabel!
 
-    func setTitle(title: String)  {
+    func setTitle(title: String) {
         knowledgebaseTitle.text = title
     }
 }

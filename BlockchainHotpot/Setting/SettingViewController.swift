@@ -14,14 +14,11 @@ class SettingViewController: UIViewController {
         super.viewDidLoad()
 
         self.title = "关于"
-        self.navigationController?.navigationBar.prefersLargeTitles = false;
+        self.navigationController?.navigationBar.prefersLargeTitles = false
         self.tabBarController?.tabBar.isHidden = true
     }
-
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-
-
 }

@@ -14,13 +14,10 @@ struct BlcokchainProjectInfo: Codable {
     var description: String?
 }
 
-
-
 struct BlockchainProjects: Codable {
     var results: [BlcokchainProjectInfo]
     var cursor: String?
 }
-
 
 class Student: NSObject {
 

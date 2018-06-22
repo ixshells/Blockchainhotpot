@@ -32,13 +32,12 @@ class KnowledgeBaseViewModel {
 
     func readKnwledgeData() -> String? {
         do {
-            if let path = Bundle.main.url(forResource: "Knowledges", withExtension: "json")
-            {
+            if let path = Bundle.main.url(forResource: "Knowledges", withExtension: "json") {
                 let jsonData = try Data(contentsOf: path)
                 let jsonString = String(data: jsonData, encoding: .utf8)
                 return jsonString
             }
-        } catch  {
+        } catch {
             print("file not found")
         }
 
@@ -50,7 +49,7 @@ class KnowledgeBaseViewModel {
 
         let decoder = JSONDecoder()
 
-        let knowledges = try! decoder.decode(Knowledges.self, from: jsonData)
+        let knowledges = try? decoder.decode(Knowledges.self, from: jsonData)
 
         return knowledges
     }

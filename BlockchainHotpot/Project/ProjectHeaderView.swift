@@ -14,7 +14,7 @@ protocol ProjectHeaderViewDelegate: NSObjectProtocol {
 
 class ProjectHeaderView: UICollectionReusableView {
 
-    weak var delegate:ProjectHeaderViewDelegate?
+    weak var delegate: ProjectHeaderViewDelegate?
 
     @IBOutlet weak var headerSettingButton: UIButton!
 
